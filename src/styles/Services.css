@@ -1,0 +1,95 @@
+/* src/styles/Services.css */
+
+.services-section {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: var(--color-background); /* Use the white background */
+}
+
+.section-title {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-dark);
+}
+
+.section-subtitle {
+    font-size: 2.15rem;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: grid;
+    /* Create 3 columns of equal size */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.service-card {
+    background: linear-gradient(
+        135deg,
+        var(--color-light-gray) 0%,
+        #f5f5f5 50%,
+        #eeeeee 100%
+    );
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+
+    /* Subtle shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Hover Effect: Modern and engaging */
+.service-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-primary); /* Highlight the card */
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    /* Optional: background circle for icons */
+    /* background-color: rgba(30, 144, 255, 0.1); */
+    /* border-radius: 50%; */
+    /* width: 60px; */
+    /* height: 60px; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+}
+
+.service-description {
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.learn-more-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.learn-more-link:hover {
+    opacity: 0.7;
+}
+
+/* Specific styling for the CTA under the grid */
+.services-cta {
+    /* Use the global .cta-secondary styles */
+}

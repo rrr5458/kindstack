@@ -1,0 +1,73 @@
+/* src/styles/CTA_Footer.css */
+
+.cta-footer-section {
+    padding: 6rem 5%;
+    background-color: var(--color-primary); /* Use primary color for high visibility */
+    color: var(--color-background); /* White text on primary background */
+    text-align: center;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-background);
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.cta-form {
+    flex: 1;
+    background-color: var(--color-background); /* White form box for contrast */
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.cta-form input[type="text"],
+.cta-form input[type="email"],
+.cta-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-dark);
+}
+
+.cta-form textarea {
+    resize: vertical;
+}
+
+.cta-form input:focus,
+.cta-form textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 0.5rem;
+}

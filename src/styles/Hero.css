@@ -1,0 +1,74 @@
+/* src/styles/Hero.css */
+
+.hero-section {
+    /* 1. Positioning Context: Crucial for the absolute-positioned video */
+    position: relative; 
+    /* 2. Overflow Hidden: Prevents the video from causing scrollbars */
+    overflow: hidden; 
+
+    /* Retain existing styles */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 5%;
+    min-height: 80vh; 
+    /* Remove background-color to let the video show through */
+    /* background-color: var(--color-light-gray); */ 
+}
+
+/* --- New Styles for Video Background --- */
+.video-background {
+    /* Position Absolute: Take it out of the normal flow */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Z-Index: Place it behind the content */
+    z-index: 1; 
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    /* Object-Fit: Ensures the video covers the entire container without stretching */
+    object-fit: cover;
+}
+
+/* --- Content Layering and Visibility --- */
+
+/* 3. Ensure Content is on top of the video */
+.hero-content {
+    /* Important: Must have a higher z-index than the video (z-index: 1) */
+    position: relative; 
+    z-index: 2; 
+
+    /* Maintain existing layout styles */
+    max-width: 33%; 
+    /* You may want to ensure text is readable against the video background */
+    color: var(--color-light); /* Assuming a dark video; adjust text color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Optional: Helps text pop */
+}
+
+/* Ensure the headline and subtext inherit the color and benefit from the layering */
+.hero-headline {
+    /* ... existing styles ... */
+    color: inherit; /* Use the color set on .hero-content */
+    margin-bottom: 1rem;
+}
+
+.hero-subtext {
+    /* ... existing styles ... */
+    color: inherit; /* Use the color set on .hero-content */
+    font-size: 2rem;
+    font-weight: 500; /* Maybe increase weight for readability */
+    margin-bottom: 1rem;
+}
+
+/* Ensure the image container also sits on top if you keep it */
+.hero-image-container {
+    position: relative;
+    z-index: 2; 
+    /* ... existing styles ... */
+}
+/* -------------------------------------- */
