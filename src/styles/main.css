@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
 
 .cta-primary:hover {
     background-color: var(--color-secondary);
-    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.6);
+    box-shadow: 0 6px 20px black;
 }
 
 /* Highlight Text */

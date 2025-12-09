@@ -1,0 +1,41 @@
+/* src/styles/PortfolioPage.css */
+
+.portfolio-grid {
+    display: grid;
+    /* Creates 3 columns that wrap responsively */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.case-study-card {
+    border: 1px solid var(--color-light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--color-background);
+}
+
+.case-study-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.case-study-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.case-study-card p {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.portfolio-cta {
+    text-align: center;
+    padding: 4rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-light-gray);
+}

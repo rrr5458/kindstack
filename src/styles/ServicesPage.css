@@ -1,0 +1,30 @@
+/* src/styles/ServicesPage.css */
+
+.service-detail-grid {
+    display: grid;
+    /* Creates 3 responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.service-detail-card {
+    padding: 2.5rem;
+    background-color: var(--color-light-gray);
+    border-radius: 12px;
+    /* Optional shadow to lift the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-detail-card h2 {
+    font-size: 1.8rem;
+    color: var(--color-text-dark);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.service-detail-card ul {
+    list-style-type: square;
+    font-size: 1rem;
+    color: var(--color-text-light);
+}

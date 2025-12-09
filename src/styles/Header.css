@@ -8,10 +8,22 @@
     align-items: center;
     padding: 1.5rem 5%; /* Padding on the sides */
     border-bottom: 1px solid var(--color-light-gray);
-    background-color: var(--color-background);
+    /* Original background color */
+    background-color: #f5f3f3; 
     position: sticky;
     top: 0;
     z-index: 100; /* Ensures it stays above other content */
+    /* Add a smooth transition for the background color change */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* --- New Style for the scrolled state --- */
+
+.main-header.scrolled {
+    /* New background color: White */
+    background-color: #FFFFFF; 
+    /* Optional: Add a subtle shadow to make it stand out from the page content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* Logo Styles (Kept as provided) */
@@ -64,9 +76,9 @@
 }
 
 .header-nav a:hover {
-    color: var(--color-primary, #1E90FF); /* Highlight on hover */
+    color: var(--color-primary, black); /* Highlight on hover */
     /* Optional: Add a subtle underline effect */
-    /* border-bottom: 2px solid var(--color-primary, #1E90FF); */
+    /* border-bottom: 2px solid var(--color-primary, black); */
 }
 
 
@@ -74,13 +86,13 @@
 /* Assuming --color-primary and --color-background are defined in main.css */
 .cta-secondary {
     border: 2px solid black;
-    color: var(--color-primary, #1E90FF);
+    color: var(--color-primary, black);
     padding: 0.75rem 1.5rem;
     font-size: 1.5rem;
     background-color: rgba(255, 166, 0, 0.396);
 }
 
 .cta-secondary:hover {
-    background-color: var(--color-primary, #1E90FF);
+    background-color: var(--color-primary, black);
     color: var(--color-background, #FFFFFF);
 }
