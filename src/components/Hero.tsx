@@ -20,7 +20,18 @@ const Hero: React.FC = () => {
             <h2 className="hero-title-one">AI agents for magical customer experiences</h2>
             <span className="hero-sub-one">For something like an industry and speciality for that</span>
           </div>
-          <span></span>
+          <div className="hero-video-container">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="hero-video"
+            >
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
         <div className="content-container-two">
           <div className="hero-gradient-overlay">

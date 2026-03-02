@@ -44,6 +44,22 @@
     letter-spacing: -2px;
 }
 
+.hero-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.hero-video-container .hero-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
 .content-container-two {
     display: flex;
     width: 100%;
