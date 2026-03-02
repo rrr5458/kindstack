@@ -21,16 +21,16 @@ const Hero: React.FC = () => {
             <span className="hero-sub-one">For something like an industry and speciality for that</span>
           </div>
           <div className="hero-video-container">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="hero-video"
+            >
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
         <div className="content-container-two">
