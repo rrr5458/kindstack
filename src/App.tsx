@@ -29,7 +29,8 @@ const App: React.FC = () => {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/ai-chatbots" element={
             <Service
-              title="🤖 AI Chatbots"
+              title="AI Chatbots"
+              iconColor="#f99a26"
               description="Intelligent conversational agents for your business."
               details={[
                 {
@@ -47,7 +48,8 @@ const App: React.FC = () => {
           } />
           <Route path="/services/site-hosting" element={
             <Service
-              title="☁️ Site Hosting"
+              title="Site Hosting"
+              iconColor="#ff5f6e"
               description="Fast, reliable hosting for your projects."
               details={[
                 {
@@ -65,7 +67,8 @@ const App: React.FC = () => {
           } />
           <Route path="/services/web-development" element={
             <Service
-              title="💻 Web Development"
+              title="Web Development"
+              iconColor="#29d68f"
               description="Custom websites built to perform."
               details={[
                 {
@@ -83,7 +86,8 @@ const App: React.FC = () => {
           } />
           <Route path="/services/mobile-development" element={
             <Service
-              title="📱 Mobile Development"
+              title="Mobile Development"
+              iconColor="#ffcf3b"
               description="iOS & Android apps from concept to launch."
               details={[
                 {
@@ -101,7 +105,8 @@ const App: React.FC = () => {
           } />
           <Route path="/services/automations-and-plugins" element={
             <Service
-              title="⚡ Automations & Plugins"
+              title="Automations & Plugins"
+              iconColor="#ff8c42"
               description="Save time with smart workflow automation."
               details={[
                 {
@@ -119,7 +124,8 @@ const App: React.FC = () => {
           } />
           <Route path="/services/apis-and-integrations" element={
             <Service
-              title="🔗 APIs & Integrations"
+              title="APIs & Integrations"
+              iconColor="#7b61ff"
               description="Connect your tools and scale your stack."
               details={[
                 {

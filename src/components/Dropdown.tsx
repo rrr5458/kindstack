@@ -1,44 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Dropdown.css";
-
-// ── 8-bit pixel smiley face ──────────────────────────────────────────────────
-// Grid is 10×10: 0 = transparent, 1 = face fill, 2 = black pixel
-function PixelSmiley({ color }: { color: string }) {
-  const grid = [
-    [0,0,0,2,2,2,2,0,0,0],
-    [0,0,2,1,1,1,1,2,0,0],
-    [0,2,1,1,1,1,1,1,2,0],
-    [2,1,1,2,1,1,2,1,1,2],
-    [2,1,1,2,1,1,2,1,1,2],
-    [2,1,1,1,1,1,1,1,1,2],
-    [2,1,2,1,1,1,1,2,1,2],
-    [0,2,1,2,2,2,2,1,2,0],
-    [0,0,2,1,1,1,1,2,0,0],
-    [0,0,0,2,2,2,2,0,0,0],
-  ];
-  const size = 2.2;
-  return (
-    <svg width="22" height="22" viewBox="0 0 22 22">
-      {grid.map((row, ri) =>
-        row.map((cell, ci) => {
-          if (cell === 0) return null;
-          return (
-            <rect
-              key={`${ri}-${ci}`}
-              x={ci * size + 1}
-              y={ri * size + 1}
-              width={size}
-              height={size}
-              fill={cell === 2 ? "#111" : color}
-            />
-          );
-        })
-      )}
-    </svg>
-  );
-}
-
+import PixelSmiley from "./PixelSmiley";
 
 interface MenuItem {
   icon: React.ReactNode;
@@ -111,7 +74,7 @@ const serviceItems: MenuItem[] = [
 ];
 
 
-function MenuColumn({ label, items }: { label: string; items: MenuItem[] }) {
+function MenuColumn({ label, items, onClose }: { label: string; items: MenuItem[]; onClose?: () => void }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
@@ -123,6 +86,7 @@ function MenuColumn({ label, items }: { label: string; items: MenuItem[] }) {
             key={item.title}
             to={item.path || "#"}
             style={{ textDecoration: 'none', color: 'inherit' }}
+            onClick={onClose}
           >
             <div
               className="dropdown-item"
@@ -150,16 +114,16 @@ function MenuColumn({ label, items }: { label: string; items: MenuItem[] }) {
 }
 
 
-export default function Dropdown({ open }: {open: boolean }) {
+export default function Dropdown({ open, onClose }: { open: boolean; onClose?: () => void }) {
 
   if (!open) return null
   
   return (
     <div className="dropdown-page">
       <div className="dropdown-card">
-        <MenuColumn label="AI Chatbots" items={chatbotItems} />
+        <MenuColumn label="AI Chatbots" items={chatbotItems} onClose={onClose} />
         <div className="dropdown-divider" />
-        <MenuColumn label="Other Services" items={serviceItems} />
+        <MenuColumn label="Other Services" items={serviceItems} onClose={onClose} />
       </div>
     </div>
   );

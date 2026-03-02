@@ -1,9 +1,11 @@
 import React from 'react';
 import './../styles/PageStyles.css';
 import './../styles/ServicesPage.css'; // Re-use the grid styling
+import PixelSmiley from '../components/PixelSmiley';
 
 interface ServiceProps {
   title: string;
+  iconColor: string;
   description: string;
   details: {
     heading: string;
@@ -12,11 +14,14 @@ interface ServiceProps {
   }[];
 }
 
-const Service: React.FC<ServiceProps> = ({ title, description, details }) => {
+const Service: React.FC<ServiceProps> = ({ title, iconColor, description, details }) => {
   return (
     <section className="page-container" id="service-page">
       <header className="page-header">
-        <h1>{title}</h1>
+        <h1 style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <PixelSmiley color={iconColor} scale={4} />
+          {title}
+        </h1>
         <p className="page-subtitle">{description}</p>
       </header>
 

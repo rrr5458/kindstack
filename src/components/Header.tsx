@@ -84,7 +84,7 @@ const Header: React.FC = () => {
             style={{ cursor: "pointer" }}
             onClick={() => setIsOpen(!isOpen)}
           />
-          <Dropdown open={isOpen}/>
+          <Dropdown open={isOpen} onClose={() => setIsOpen(false)}/>
         </div>
       </div>
     </header>
