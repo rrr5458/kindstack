@@ -12,7 +12,7 @@
     /* Primary brand color (use for CTAs, highlights) */
     --color-primary: #f99a26; /* Electric Blue/Dodger Blue */
     /* Secondary accent color (subtle contrast) */
-    --color-secondary: #00BFFF; /* Deep Sky Blue */
+    --color-secondary: #f8af11; /* Deep Sky Blue */
     /* Backgrounds */
     --color-background: #FFFFFF;
     --color-light-gray: #F4F7F9;
@@ -55,9 +55,13 @@ h1, h2, h3, h4 {
 
 /* Primary CTA Style */
 .cta-primary {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     background-color: var(--color-primary);
     color: var(--color-background);
     box-shadow: 0 4px 15px #FF6B6B;
+    font-size: 1.5rem;
+    width: 100%;
 }
 
 .cta-primary:hover {

@@ -3,10 +3,15 @@
 import React, { useState, useEffect } from "react";
 import "./../styles/Header.css";
 import { Link } from "react-router-dom";
+// import DownArrow from "./../shapes/DownArrow";
+import imgSroucePng from "../assets/3dsmiley.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Dropdown from "./Dropdown";
 
 const Header: React.FC = () => {
   // 1. State to track if the scroll threshold has been passed
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   // 2. Effect to add and clean up the scroll listener
   useEffect(() => {
@@ -38,27 +43,49 @@ const Header: React.FC = () => {
     // Apply the conditional class to the header element
     <header className={headerClass}>
       <Link to="/">
-        <div  className="logo">
-          <h1>
-            <span className="brand-name">
+        <div className="left-section">
+          <img
+            src={imgSroucePng}
+            width="50"
+            height="50"
+            alt="Description of the image"
+          ></img>
+          <div className="logo">
+            <h1>
               <span className="brand-accent">KindStack</span>
-            </span>
-            <span className="brand-tagline">WebSolutions</span>
-          </h1>
+              <span className="brand-tagline">WebSolutions</span>
+            </h1>
+          </div>
         </div>
       </Link>
-
-      {/* Revised right-section */}
-      <div className="right-section">
-        {/* Navigation Links */}
-        <nav className="header-nav">
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/portfolio">Portfolio</Link>
-        </nav>
-        <Link to="/contact">
-          <button className="cta-secondary">Contact</button>
+      <div className="middle-section">
+        {/* <Link to="/services" className="middle-link">
+          <span className="middle-link-text">Services</span>
+          <DownArrow isOpen={false} />
         </Link>
+        <Link to="/services" className="middle-link">
+          <span className="middle-link-text">About</span>
+        </Link>
+        <Link to="/services" className="middle-link">
+          <span className="middle-link-text">Portfolio</span>
+        </Link> */}
+      </div>
+
+      <div className="right-section">
+        <div className="cta-secondary-container">
+          <Link to="/contact">
+            <button className="cta-secondary">Contact</button>
+          </Link>
+        </div>
+        <div className="dropdown-wrapper" style={{ position: "relative" }}>
+          <GiHamburgerMenu
+            size={50}
+            color={"#f99a26"}
+            style={{ cursor: "pointer" }}
+            onClick={() => setIsOpen(!isOpen)}
+          />
+          <Dropdown open={isOpen}/>
+        </div>
       </div>
     </header>
   );

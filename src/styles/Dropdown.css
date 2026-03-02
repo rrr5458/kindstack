@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* ── Page wrapper ── */
+.dropdown-page {
+  position: absolute;
+  width: 115rem;
+  top: 135%;      /* Places it exactly at the bottom of the header */
+  right: 0;       /* Aligns it to the right edge of the wrapper */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+/* ── Card ── */
+.dropdown-card {
+  background: #e9e2d6;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: inset 0 0 30px 1px #f99a26;
+  mask-image: radial-gradient(circle, black 60%, #f99a26 100%);
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+
+}
+
+/* ── Divider between columns ── */
+.dropdown-divider {
+  width: 1px;
+  background: #f99a26;
+  margin: 24px 0;
+  flex-shrink: 0;
+}
+
+/* ── Column ── */
+.dropdown-column {
+  flex: 1;
+  padding: 28px 32px;
+}
+
+.dropdown-column__label {
+  font-size: 30px;
+  letter-spacing: 0.18em;
+  color: #718096; /* Medium gray */
+  margin: 0 0 20px 0;
+}
+
+.dropdown-column__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Menu item ── */
+.dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.dropdown-item:hover {
+  background: #e8d7bc;
+}
+
+/* ── Icon box ── */
+.dropdown-item__icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.dropdown-item:hover .dropdown-item__icon {
+  background: #fff;
+  /* border-color is set inline per-item to use the smiley's unique color */
+}
+
+/* ── Text ── */
+.dropdown-item__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 2px 0;
+}
+
+.dropdown-item__description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}

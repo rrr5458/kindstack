@@ -1,74 +1,85 @@
 /* src/styles/Hero.css */
 
 .hero-section {
-    /* 1. Positioning Context: Crucial for the absolute-positioned video */
-    position: relative; 
-    /* 2. Overflow Hidden: Prevents the video from causing scrollbars */
-    overflow: hidden; 
+  position: relative; /* Essential: Creates a boundary for absolute children */
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e8d7bc6c;
+}
 
-    /* Retain existing styles */
+.content-container-main {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.content-container-one {
+    display: flex;
+    width: 100%;
+    height: 53rem;
     justify-content: space-between;
-    align-items: center;
-    padding: 6rem 5%;
-    min-height: 80vh; 
-    /* Remove background-color to let the video show through */
-    /* background-color: var(--color-light-gray); */ 
+    padding: 10rem 10rem;
 }
 
-/* --- New Styles for Video Background --- */
-.video-background {
-    /* Position Absolute: Take it out of the normal flow */
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-title-one-container {
+    width: 56%;
+}
+
+.hero-title-one {
+    font-size: 6.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0); 
+    letter-spacing: -2px;
+}
+
+.hero-sub-one {
+    font-size: 2.75rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: rgb(70, 70, 70); 
+    letter-spacing: -2px;
+}
+
+.content-container-two {
+    display: flex;
     width: 100%;
-    height: 100%;
-    /* Z-Index: Place it behind the content */
-    z-index: 1; 
+    justify-content: space-around;
+    padding: 5rem 5rem;
 }
 
-.video-background video {
-    width: 100%;
-    height: 100%;
-    /* Object-Fit: Ensures the video covers the entire container without stretching */
-    object-fit: cover;
+.image-background {
+  position: absolute; /* Takes it out of the document flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Lowest layer */
 }
 
-/* --- Content Layering and Visibility --- */
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.09;
+}
 
-/* 3. Ensure Content is on top of the video */
 .hero-content {
-    /* Important: Must have a higher z-index than the video (z-index: 1) */
-    position: relative; 
-    z-index: 2; 
-
-    /* Maintain existing layout styles */
-    max-width: 33%; 
-    /* You may want to ensure text is readable against the video background */
-    color: var(--color-light); /* Assuming a dark video; adjust text color */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Optional: Helps text pop */
+  position: relative; 
+  z-index: 10; /* Higher than the background */
+  max-width: 50%;
+  color: black; /* Example color */
+  text-align: center;
 }
 
-/* Ensure the headline and subtext inherit the color and benefit from the layering */
-.hero-headline {
-    /* ... existing styles ... */
-    color: inherit; /* Use the color set on .hero-content */
-    margin-bottom: 1rem;
+.hero-gradient-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5; /* Between the image (1) and the text (10) */
+  pointer-events: none; /* Allows clicks to pass through to buttons if needed */
 }
-
-.hero-subtext {
-    /* ... existing styles ... */
-    color: inherit; /* Use the color set on .hero-content */
-    font-size: 2rem;
-    font-weight: 500; /* Maybe increase weight for readability */
-    margin-bottom: 1rem;
-}
-
-/* Ensure the image container also sits on top if you keep it */
-.hero-image-container {
-    position: relative;
-    z-index: 2; 
-    /* ... existing styles ... */
-}
-/* -------------------------------------- */

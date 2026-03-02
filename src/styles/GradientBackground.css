@@ -1,0 +1,107 @@
+:root {
+  /* Color Scheme: #e8d7bc (Cream), Black, Orange */
+  --color-bg: #e8d7bc;         
+  --color1: #000000;     
+  --color2: 255, 165, 0;       
+  --circle-size: 80%;
+}
+
+.gradient-bg {
+  width: 90%;
+  height: 50rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+  border-radius: 20px;
+  box-shadow: inset 0 0 30px 10px #f99a26;
+  mask-image: radial-gradient(circle, black 60%, #f99a26 100%);
+}
+
+/* Grainy Texture from video */
+.gradient-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  opacity: 0.12;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.content-overlay {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.managed-text-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.832); 
+  letter-spacing: -2px;
+}
+
+/* 50% Opacity White Text */
+.managed-text-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.808); 
+  letter-spacing: -2px;
+}
+
+/* Baunov's Blobs - Times reduced by 25% for speed */
+.gradients-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+}
+
+.g1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.6) 0, rgba(var(--color1), 0) 50%);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: 10%;
+  left: 10%;
+  /* Reduced from 30s to 22.5s */
+  animation: moveVertical 22.5s ease infinite; 
+}
+
+.g2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.5) 0, rgba(var(--color2), 0) 50%);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: 20%;
+  right: 10%;
+  /* Reduced from 20s to 15s */
+  animation: moveInCircle 40s reverse infinite;
+}
+
+.interactive {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.7) 0, rgba(var(--color2), 0) 50%);
+  width: 100%;
+  height: 100%;
+  top: -50%;
+  left: -50%;
+  mix-blend-mode: screen;
+}
+
+@keyframes moveInCircle {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveVertical {
+  0% { transform: translateY(-30%); }
+  50% { transform: translateY(30%); }
+  100% { transform: translateY(-30%); }
+}

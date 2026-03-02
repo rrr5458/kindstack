@@ -18,8 +18,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       {/* Header and Footer are outside Routes so they appear on ALL pages */}
-      <Header />
-      
+        <Header />
       <main>
         <Routes>
           {/* 1. Map the root URL to the combined home page content */}
