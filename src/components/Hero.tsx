@@ -6,7 +6,6 @@ import GradientBackground from "./GradientBackground";
 const Hero: React.FC = () => {
   return (
     <section className="hero-section">
-      {/* This div now acts as a true background layer */}
       <div className="image-background">
         <img
           src={imgSroucePng}
