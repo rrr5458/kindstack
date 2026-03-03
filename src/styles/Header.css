@@ -144,5 +144,23 @@
   overflow: hidden;
 }
 
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .main-header {
+        padding: 0.75rem 1rem;
+    }
+    .middle-section {
+        display: none;
+    }
+    .header-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .logo .brand-accent {
+        font-size: 2rem;
+    }
+}
 
 

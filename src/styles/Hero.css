@@ -99,3 +99,67 @@
   z-index: 5; /* Between the image (1) and the text (10) */
   pointer-events: none; /* Allows clicks to pass through to buttons if needed */
 }
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    .content-container-one {
+        padding: 8rem 5rem;
+    }
+    .hero-title-one {
+        font-size: 5.5rem;
+    }
+    .hero-sub-one {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .content-container-one {
+        flex-direction: column;
+        height: auto;
+        padding: 6rem 3rem;
+        gap: 2rem;
+    }
+    .hero-title-one-container,
+    .hero-video-container {
+        width: 100%;
+    }
+    .content-container-two {
+        flex-direction: column;
+        padding: 3rem 3rem;
+        gap: 2rem;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-container-one {
+        padding: 5rem 2rem;
+    }
+    .hero-title-one {
+        font-size: 4.5rem;
+    }
+    .hero-sub-one {
+        font-size: 1.8rem;
+    }
+    .content-container-two {
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .content-container-one {
+        padding: 3rem 1rem;
+    }
+    .hero-title-one {
+        font-size: 3rem;
+    }
+    .hero-sub-one {
+        font-size: 1.5rem;
+    }
+    .content-container-two {
+        padding: 2rem 1rem;
+    }
+}
