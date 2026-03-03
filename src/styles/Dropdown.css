@@ -7,9 +7,9 @@
 /* ── Page wrapper ── */
 .dropdown-page {
   position: absolute;
-  width: 115rem;
-  top: 135%;      /* Places it exactly at the bottom of the header */
-  right: 0;       /* Aligns it to the right edge of the wrapper */
+  width: 85rem;
+  top: 135%;
+  right: 0;       
   z-index: 1000;
   display: flex;
   align-items: center;
