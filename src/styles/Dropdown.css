@@ -103,3 +103,71 @@
   margin: 0;
   line-height: 1.4;
 }
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .dropdown-page {
+    width: 60rem; /* Narrower width for smaller screens */
+  }
+  .dropdown-column {
+    padding: 20px 24px;
+  }
+  .dropdown-item__title {
+    font-size: 22px;
+  }
+  .dropdown-item__description {
+    font-size: 16px;
+  }
+  .dropdown-column__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown-page {
+    width: 35rem; /* Narrower and switches layout */
+    right: -2rem; /* Give space on right relative to burger icon */
+  }
+  .dropdown-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .dropdown-divider {
+    width: 100%;
+    height: 1px;
+    margin: 12px 0;
+  }
+  .dropdown-column {
+    padding: 10px 16px;
+  }
+  .dropdown-column__label {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .dropdown-item__title {
+    font-size: 18px;
+  }
+  .dropdown-item__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .dropdown-page {
+    width: 90vw;
+    right: -1rem; /* Closer to the edge */
+  }
+  .dropdown-column {
+    padding: 8px 10px;
+  }
+  .dropdown-item__icon {
+    width: 32px;
+    height: 32px;
+  }
+  .dropdown-item__title {
+    font-size: 16px;
+  }
+  .dropdown-item__description {
+    font-size: 13px;
+  }
+}
