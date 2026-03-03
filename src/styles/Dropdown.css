@@ -105,7 +105,26 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 991px) {
+
+@media (max-width: 1740px) {
+  .dropdown-page {
+    width: 70rem; /* Narrower width for smaller screens */
+  }
+  .dropdown-column {
+    padding: 20px 24px;
+  }
+  .dropdown-item__title {
+    font-size: 22px;
+  }
+  .dropdown-item__description {
+    font-size: 16px;
+  }
+  .dropdown-column__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1450px) {
   .dropdown-page {
     width: 60rem; /* Narrower width for smaller screens */
   }
@@ -122,6 +141,58 @@
     font-size: 24px;
   }
 }
+
+@media (max-width: 1160px) {
+  .dropdown-page {
+    width: 55rem; /* Narrower width for smaller screens */
+  }
+  .dropdown-column {
+    padding: 20px 24px;
+  }
+  .dropdown-item__title {
+    font-size: 22px;
+  }
+  .dropdown-item__description {
+    font-size: 16px;
+  }
+  .dropdown-column__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .dropdown-page {
+    width: 60rem; /* Narrower width for smaller screens */
+  }
+  .dropdown-column {
+    padding: 20px 24px;
+  }
+  .dropdown-item__title {
+    font-size: 22px;
+  }
+  .dropdown-item__description {
+    font-size: 16px;
+  }
+  .dropdown-column__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 998px) {
+  .dropdown-page {
+    width: 55rem; /* Narrower and switches layout */
+    right: -2rem; /* Give space on right relative to burger icon */
+  }
+
+  }
+
+@media (max-width: 894px) {
+  .dropdown-page {
+    width: 50rem; /* Narrower and switches layout */
+    right: -2rem; /* Give space on right relative to burger icon */
+  }
+
+  }
 
 @media (max-width: 767px) {
   .dropdown-page {

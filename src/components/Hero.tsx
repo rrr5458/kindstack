@@ -13,23 +13,23 @@ const Hero: React.FC = () => {
       </div>
       <div className="content-container-main">
         <div className="content-container-one">
-          <img 
-                src={triangleImg} 
-                alt="Yellow triangle" 
-                className="hero-shape shape-tl" 
-              />
+          <img
+            src={triangleImg}
+            alt="Yellow triangle"
+            className="hero-shape shape-tl"
+          />
           <div className="hero-title-one-container">
             <h2 className="hero-title-one">
               AI agents for magical customer experiences
             </h2>
-              <img 
-                src={orangeImg} 
-                alt="Orange circle"
-                height="300"
-                width="300" 
-                style={{position: "absolute", bottom: 50}}
-                className="shape-br" 
-              />
+            <img
+              src={orangeImg}
+              alt="Orange circle"
+              height="300"
+              width="300"
+              style={{ position: "absolute", bottom: 0 }}
+              className="shape-br"
+            />
             <span className="hero-sub-one">
               For something like an industry and speciality for that
             </span>
