@@ -50,8 +50,8 @@ const Hero: React.FC = () => {
               </Link>
             </div>
           </div>
-          <LogoScroller />
         </div>
+        <LogoScroller />
         <div className="content-container-two">
           <div className="hero-gradient-overlay">
             <GradientBackground />

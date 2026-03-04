@@ -1,0 +1,72 @@
+/* LogoScroller.css */
+
+.scroller-root {
+  width: 100%;
+  background-color: #e8d7bc;
+  /* Increased from 16px to 32px to give larger logos breathing room */
+  padding: 32px 0; 
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-track {
+  display: flex;
+  width: max-content;
+  /* 40s is a good starting point, increase to 60s if it feels too fast now */
+  animation: scroll-left 40s linear infinite;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Maintained 10rem gap (5rem each side) */
+  padding: 0 5rem; 
+  flex-shrink: 0;
+}
+
+.logo-item-content {
+  /* DOUBLED SIZE: Changed from 32px to 64px */
+  height: 64px; 
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.logo-item-content:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Widened the fades slightly for the larger logos */
+.edge-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200px; 
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fade-left { 
+  left: 0; 
+  background: linear-gradient(to right, #e8d7bc, transparent); 
+}
+
+.fade-right { 
+  right: 0; 
+  background: linear-gradient(to left, #e8d7bc, transparent); 
+}
+
+.scroller-root:hover .scroll-track {
+  animation-play-state: paused;
+}
