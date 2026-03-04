@@ -1,79 +1,127 @@
-/* src/styles/Hero.css */
-
 .hero-section {
-  position: relative; /* Essential: Creates a boundary for absolute children */
+  position: relative;
   display: flex;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background-color: #e8d7bc6c;
 }
 
 .content-container-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .content-container-one {
-    display: flex;
-    width: 100%;
-    height: 53rem;
-    justify-content: space-between;
-    padding: 10rem 10rem;
+  display: flex;
+  width: 100%;
+  height: 53rem;
+  justify-content: space-between;
+  padding: 10rem 10rem;
 }
 
 .hero-title-one-container {
-    width: 56%;
+  position: relative;
+  width: 60%;
 }
 
 .hero-title-one {
-    font-size: 6.5rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    color: rgba(0, 0, 0);
-    letter-spacing: -2px;
+  font-size: 5.00rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0);
+  letter-spacing: -2px;
 }
 
 .hero-sub-one {
-    font-size: 2.75rem;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    color: rgb(70, 70, 70);
-    letter-spacing: -2px;
+  font-size: 2.75rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: rgb(70, 70, 70);
+  letter-spacing: -2px;
 }
 
 .hero-video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  z-index: 10;
+}
+
+.cta-secondary-container-hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    z-index: 10;
+    width: 75%;
+    height: 5rem;
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    margin-right: 1.5rem;
+}
+
+.cta-secondary {
+    color: var(--color-background, #FFFFFF);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(255, 166, 0, 0.396);
+}
+
+.hero-shape {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  pointer-events: none;
+  z-index: 11;
+}
+
+.shape-tl {
+  top: -40px;
+  left: 0px;
+  transform: rotate(-15deg);
+  opacity: 0.9;
+}
+
+.shape-br {
+  bottom: 0px;
+  right: 0;
+  transform: rotate(10deg);
+}
+
+.hero-title-one,
+.hero-sub-one {
+  position: relative;
+  z-index: 5;
 }
 
 .hero-video-container .hero-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  margin-bottom: 2rem;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .content-container-two {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    padding: 5rem 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 5rem 5rem;
 }
 
 .image-background {
-  position: absolute; /* Takes it out of the document flow */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Lowest layer */
+  z-index: 1;
 }
 
 .hero-bg-img {
@@ -85,9 +133,9 @@
 
 .hero-content {
   position: relative;
-  z-index: 10; /* Higher than the background */
+  z-index: 10;
   max-width: 50%;
-  color: black; /* Example color */
+  color: black;
   text-align: center;
 }
 
@@ -96,70 +144,88 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 5; /* Between the image (1) and the text (10) */
-  pointer-events: none; /* Allows clicks to pass through to buttons if needed */
+  z-index: 5;
+  pointer-events: none;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1510px) {
+  .content-container-one {
+    padding: 8rem 5rem;
+  }
+  .hero-title-one {
+    font-size: 5.5rem;
+  }
+  .hero-sub-one {
+    font-size: 2.2rem;
+  }
+  .hero-shape {
+    display: none;
+  }
+  .shape-br {
+    display: none;
+  }
+}
+
 @media (max-width: 1199px) {
-    .content-container-one {
-        padding: 8rem 5rem;
-    }
-    .hero-title-one {
-        font-size: 5.5rem;
-    }
-    .hero-sub-one {
-        font-size: 2.2rem;
-    }
+  .content-container-one {
+    padding: 8rem 5rem;
+  }
+  .hero-title-one {
+    font-size: 5.5rem;
+  }
+  .hero-sub-one {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 991px) {
-    .content-container-one {
-        flex-direction: column;
-        height: auto;
-        padding: 6rem 3rem;
-        gap: 2rem;
-    }
-    .hero-title-one-container,
-    .hero-video-container {
-        width: 100%;
-    }
-    .content-container-two {
-        flex-direction: column;
-        padding: 3rem 3rem;
-        gap: 2rem;
-    }
-    .hero-content {
-        max-width: 100%;
-    }
+  .content-container-one {
+    flex-direction: column;
+    height: auto;
+    padding: 6rem 3rem;
+    gap: 2rem;
+  }
+  .hero-title-one-container,
+  .hero-video-container {
+    width: 100%;
+  }
+  .content-container-two {
+    flex-direction: column;
+    padding: 3rem 3rem;
+    gap: 2rem;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
-    .content-container-one {
-        padding: 5rem 2rem;
-    }
-    .hero-title-one {
-        font-size: 4.5rem;
-    }
-    .hero-sub-one {
-        font-size: 1.8rem;
-    }
-    .content-container-two {
-        padding: 2rem 2rem;
-    }
+  .content-container-one {
+    padding: 5rem 2rem;
+  }
+  .hero-title-one {
+    font-size: 4.5rem;
+  }
+  .hero-sub-one {
+    font-size: 1.8rem;
+  }
+  .content-container-two {
+    padding: 2rem 2rem;
+  }
 }
 
 @media (max-width: 575px) {
-    .content-container-one {
-        padding: 3rem 1rem;
-    }
-    .hero-title-one {
-        font-size: 3rem;
-    }
-    .hero-sub-one {
-        font-size: 1.5rem;
-    }
-    .content-container-two {
-        padding: 2rem 1rem;
-    }
+  .content-container-one {
+    padding: 3rem 1rem;
+  }
+  .hero-title-one {
+    font-size: 3rem;
+  }
+  .hero-sub-one {
+    font-size: 1.5rem;
+  }
+  .content-container-two {
+    padding: 2rem 1rem;
+  }
 }
