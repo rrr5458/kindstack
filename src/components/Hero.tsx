@@ -5,6 +5,7 @@ import triangleImg from "../assets/yellow-triangle.png";
 import circleImg from "../assets/orange-circle.png";
 import GradientBackground from "./GradientBackground";
 import { Link } from "react-router-dom";
+import LogoScroller from "./LogoScroller";
 
 const Hero: React.FC = () => {
   return (
@@ -50,6 +51,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
+        <LogoScroller />
         <div className="content-container-two">
           <div className="hero-gradient-overlay">
             <GradientBackground />
