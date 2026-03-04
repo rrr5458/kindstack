@@ -2,7 +2,7 @@ import React from "react";
 import "./../styles/Hero.css";
 import bgImg from "../assets/shapes_hero_image.png";
 import triangleImg from "../assets/yellow-triangle.png";
-import orangeImg from "../assets/orange-circle.png";
+import circleImg from "../assets/orange-circle.png";
 import GradientBackground from "./GradientBackground";
 import { Link } from "react-router-dom";
 
@@ -23,17 +23,17 @@ const Hero: React.FC = () => {
             <h2 className="hero-title-one">
               AI agents for magical customer experiences
             </h2>
-            <img
-              src={orangeImg}
-              alt="Orange circle"
-              height="300"
-              width="300"
-              style={{ position: "absolute", bottom: 0 }}
-              className="shape-br"
-            />
             <span className="hero-sub-one">
               For something like an industry and speciality for that
             </span>
+            <img
+              src={circleImg}
+              alt="Orange circle"
+              height="300"
+              width="300"
+              style={{ position: "absolute", bottom: -40 }}
+              className="shape-br"
+            />
           </div>
           <div className="hero-video-container">
             <video autoPlay loop muted playsInline className="hero-video">
@@ -45,15 +45,12 @@ const Hero: React.FC = () => {
             </video>
             <div className="cta-secondary-container-hero">
               <Link to="/contact">
-                <button className="cta-secondary">Contact</button>
+                <button className="cta-secondary-hero">CONTACT</button>
               </Link>
             </div>
           </div>
         </div>
         <div className="content-container-two">
-          <div className="hero-gradient-overlay">
-            <GradientBackground />
-          </div>
           <div className="hero-gradient-overlay">
             <GradientBackground />
           </div>
