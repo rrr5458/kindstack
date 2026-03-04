@@ -1,13 +1,14 @@
 import React from 'react';
+import '../styles/NewComponents.css';
 
 const PriceBlurb: React.FC = () => {
   return (
-    <section id="price-blurb" className="py-16 px-4 bg-orange-50 text-center">
-      <div className="max-w-3xl mx-auto flex flex-col items-center">
-        <h2 className="text-3xl font-bold mb-6">
-          Find out how much it would to grow your business
-        </h2>
-        <button className="cta-primary max-w-xs">
+    <section id="price-blurb" className="new-section-container bg-alt">
+      <h2 className="new-section-title">
+        Find out how much it would to grow your business
+      </h2>
+      <div className="new-section-btn-container">
+        <button className="new-section-btn">
           Get a Quote
         </button>
       </div>
