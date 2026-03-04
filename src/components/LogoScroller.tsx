@@ -32,10 +32,8 @@ const LogoScroller: React.FC = () =>  {
         </svg>
       )
     },
-    // Assets folder images
-    { id: 3, content: <img src="/assets/logo3.png" alt="Logo 3" className="h-8 w-auto grayscale contrast-125 opacity-70 hover:opacity-100 hover:grayscale-0 transition-all" /> },
-    { id: 4, content: <img src="/assets/logo4.png" alt="Logo 4" className="h-8 w-auto grayscale contrast-125 opacity-70 hover:opacity-100 hover:grayscale-0 transition-all" /> },
-    { id: 5, content: <img src="/assets/logo5.png" alt="Logo 5" className="h-8 w-auto grayscale contrast-125 opacity-70 hover:opacity-100 hover:grayscale-0 transition-all" /> },
+    // Assets folder svgs go here
+
   ];
 
   return (
