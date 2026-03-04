@@ -82,3 +82,30 @@
     color: var(--color-text-light);
     font-size: 0.85rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .footer-content-wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-content-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer-column {
+        text-align: center;
+    }
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .main-footer {
+        padding: 2rem 5% 1rem;
+    }
+}

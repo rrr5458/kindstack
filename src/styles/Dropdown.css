@@ -7,9 +7,9 @@
 /* ── Page wrapper ── */
 .dropdown-page {
   position: absolute;
-  width: 115rem;
-  top: 135%;      /* Places it exactly at the bottom of the header */
-  right: 0;       /* Aligns it to the right edge of the wrapper */
+  width: 85rem;
+  top: 135%;
+  right: 0;   
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -102,4 +102,135 @@
   color: #666;
   margin: 0;
   line-height: 1.4;
+}
+
+@media (max-width: 1740px) {
+  .dropdown-page {
+    width: 70rem; 
+  }
+  .dropdown-column {
+    padding: 20px 24px;
+  }
+  .dropdown-item__title {
+    font-size: 22px;
+  }
+  .dropdown-item__description {
+    font-size: 16px;
+  }
+  .dropdown-column__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .dropdown-page {
+    width: 60rem; 
+  }
+  .dropdown-column {
+    padding: 20px 24px;
+  }
+  .dropdown-item__title {
+    font-size: 22px;
+  }
+  .dropdown-item__description {
+    font-size: 16px;
+  }
+  .dropdown-column__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .dropdown-page {
+    width: 55rem; 
+  }
+  .dropdown-column {
+    padding: 20px 24px;
+  }
+  .dropdown-item__title {
+    font-size: 22px;
+  }
+  .dropdown-item__description {
+    font-size: 16px;
+  }
+  .dropdown-column__label {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .dropdown-page {
+    width: 60rem; /* Narrower width for smaller screens */
+  }
+}
+@media (max-width: 991px) {
+  .dropdown-page {
+    width: 60rem; /* Narrower width for smaller screens */
+  }
+  }
+
+
+@media (max-width: 998px) {
+  .dropdown-page {
+    width: 55rem; /* Narrower and switches layout */
+    right: -2rem; /* Give space on right relative to burger icon */
+  }
+
+  }
+
+@media (max-width: 894px) {
+  .dropdown-page {
+    width: 50rem; /* Narrower and switches layout */
+    right: -2rem; /* Give space on right relative to burger icon */
+  }
+
+  }
+
+@media (max-width: 767px) {
+  .dropdown-page {
+    width: 35rem; /* Narrower and switches layout */
+    right: -2rem; /* Give space on right relative to burger icon */
+  }
+  .dropdown-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .dropdown-divider {
+    width: 100%;
+    height: 1px;
+    margin: 12px 0;
+  }
+  .dropdown-column {
+    padding: 10px 16px;
+  }
+  .dropdown-column__label {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .dropdown-item__title {
+    font-size: 18px;
+  }
+  .dropdown-item__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .dropdown-page {
+    width: 90vw;
+    right: -1rem; /* Closer to the edge */
+  }
+  .dropdown-column {
+    padding: 8px 10px;
+  }
+  .dropdown-item__icon {
+    width: 32px;
+    height: 32px;
+  }
+  .dropdown-item__title {
+    font-size: 16px;
+  }
+  .dropdown-item__description {
+    font-size: 13px;
+  }
 }

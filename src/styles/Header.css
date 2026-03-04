@@ -12,6 +12,7 @@
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+
 .main-header.scrolled {
     background-color: #e8d7bc; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
@@ -119,8 +120,6 @@
   right: 0;
   margin-top: 10px;
   z-index: 1000;
-  
-  /* Modern Styling */
   background: white;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -128,5 +127,28 @@
   overflow: hidden;
 }
 
+@media (max-width: 991px) {
+    .main-header {
+        padding: 0.75rem 1rem;
+    }
+    .middle-section {
+        display: none;
+    }
+    .header-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-secondary-container {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .logo {
+        display: none;
+    }
+}
 
 

@@ -24,11 +24,11 @@
 
 .hero-title-one-container {
   position: relative;
-  width: 56%;
+  width: 60%;
 }
 
 .hero-title-one {
-  font-size: 6.5rem;
+  font-size: 5.00rem;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: rgba(0, 0, 0);
@@ -45,39 +45,52 @@
 
 .hero-video-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 40%;
   z-index: 10;
 }
 
-/* 2. Base style for both shapes */
-.hero-shape {
-  position: absolute;
-  width: 300px; /* Adjust size to your liking */
-  height: auto;
-  pointer-events: none;
-  z-index: 11; /* Sits slightly above the text */
+.cta-secondary-container-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 5rem;
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    margin-right: 1.5rem;
 }
 
-/* 3. Top Left Shape - partially covering the start of the title */
+.cta-secondary {
+    color: var(--color-background, #FFFFFF);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: rgba(255, 166, 0, 0.396);
+}
+
+.hero-shape {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  pointer-events: none;
+  z-index: 11;
+}
+
 .shape-tl {
   top: -40px;
   left: 0px;
-  /* Adjust these percentages to change how much it 'boxes' the text */
   transform: rotate(-15deg);
   opacity: 0.9;
 }
 
-/* 4. Bottom Right Shape - partially covering the end of the subtitle */
 .shape-br {
   bottom: 0px;
   right: 0;
   transform: rotate(10deg);
-  opacity: 0.9;
 }
 
-/* 5. Ensure text stays visible but below shapes */
 .hero-title-one,
 .hero-sub-one {
   position: relative;
@@ -86,6 +99,7 @@
 
 .hero-video-container .hero-video {
   width: 100%;
+  margin-bottom: 2rem;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   object-fit: cover;
@@ -120,6 +134,7 @@
 .hero-content {
   position: relative;
   z-index: 10;
+  max-width: 50%;
   color: black;
   text-align: center;
 }
@@ -131,4 +146,86 @@
   height: 100%;
   z-index: 5;
   pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1510px) {
+  .content-container-one {
+    padding: 8rem 5rem;
+  }
+  .hero-title-one {
+    font-size: 5.5rem;
+  }
+  .hero-sub-one {
+    font-size: 2.2rem;
+  }
+  .hero-shape {
+    display: none;
+  }
+  .shape-br {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .content-container-one {
+    padding: 8rem 5rem;
+  }
+  .hero-title-one {
+    font-size: 5.5rem;
+  }
+  .hero-sub-one {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .content-container-one {
+    flex-direction: column;
+    height: auto;
+    padding: 6rem 3rem;
+    gap: 2rem;
+  }
+  .hero-title-one-container,
+  .hero-video-container {
+    width: 100%;
+  }
+  .content-container-two {
+    flex-direction: column;
+    padding: 3rem 3rem;
+    gap: 2rem;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .content-container-one {
+    padding: 5rem 2rem;
+  }
+  .hero-title-one {
+    font-size: 4.5rem;
+  }
+  .hero-sub-one {
+    font-size: 1.8rem;
+  }
+  .content-container-two {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .content-container-one {
+    padding: 3rem 1rem;
+  }
+  .hero-title-one {
+    font-size: 3rem;
+  }
+  .hero-sub-one {
+    font-size: 1.5rem;
+  }
+  .content-container-two {
+    padding: 2rem 1rem;
+  }
 }

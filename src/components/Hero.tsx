@@ -4,6 +4,7 @@ import bgImg from "../assets/shapes_hero_image.png";
 import triangleImg from "../assets/yellow-triangle.png";
 import orangeImg from "../assets/orange-circle.png";
 import GradientBackground from "./GradientBackground";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   return (
@@ -13,35 +14,40 @@ const Hero: React.FC = () => {
       </div>
       <div className="content-container-main">
         <div className="content-container-one">
-          <img 
-                src={triangleImg} 
-                alt="Yellow triangle" 
-                className="hero-shape shape-tl" 
-              />
+          <img
+            src={triangleImg}
+            alt="Yellow triangle"
+            className="hero-shape shape-tl"
+          />
           <div className="hero-title-one-container">
             <h2 className="hero-title-one">
               AI agents for magical customer experiences
             </h2>
-              <img 
-                src={orangeImg} 
-                alt="Orange circle"
-                height="300"
-                width="300" 
-                style={{position: "absolute", bottom: 50}}
-                className="shape-br" 
-              />
+            <img
+              src={orangeImg}
+              alt="Orange circle"
+              height="300"
+              width="300"
+              style={{ position: "absolute", bottom: 0 }}
+              className="shape-br"
+            />
             <span className="hero-sub-one">
               For something like an industry and speciality for that
             </span>
           </div>
-
           <div className="hero-video-container">
             <video autoPlay loop muted playsInline className="hero-video">
               <source
                 src="https://www.w3schools.com/html/mov_bbb.mp4"
                 type="video/mp4"
               />
+              Your browser does not support the video tag.
             </video>
+            <div className="cta-secondary-container-hero">
+              <Link to="/contact">
+                <button className="cta-secondary">Contact</button>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="content-container-two">

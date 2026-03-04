@@ -39,3 +39,21 @@
     margin-top: 3rem;
     border-top: 1px solid var(--color-light-gray);
 }
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    .portfolio-cta {
+        padding: 3rem 0;
+        margin-top: 2rem;
+    }
+}

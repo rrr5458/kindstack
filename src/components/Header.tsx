@@ -9,6 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Dropdown from "./Dropdown";
 
 const Header: React.FC = () => {
+
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
 

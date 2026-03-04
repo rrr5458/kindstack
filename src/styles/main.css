@@ -73,3 +73,44 @@ h1, h2, h3, h4 {
 .highlight-text {
     color: var(--color-primary);
 }
+
+/* Base font sizes for responsiveness based on breakpoints */
+/* Extra Small (< 576px) */
+html {
+    font-size: 14px;
+}
+
+/* Small (>= 576px) */
+@media (min-width: 576px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Medium (>= 768px) */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Large (>= 992px) */
+@media (min-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Extra Large (>= 1200px) */
+@media (min-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Extra Extra Large (>= 1400px) */
+@media (min-width: 1400px) {
+    html {
+        font-size: 20px;
+    }
+}
