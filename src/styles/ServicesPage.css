@@ -9,11 +9,24 @@
 }
 
 .service-detail-card {
+    background: linear-gradient(
+        135deg,
+        var(--color-light-gray) 0%,
+        #f5f5f5 50%,
+        #eeeeee 100%
+    );
     padding: 2.5rem;
-    background-color: var(--color-light-gray);
     border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
     /* Optional shadow to lift the card */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-primary); /* Highlight the card */
 }
 
 .service-detail-card h2 {
