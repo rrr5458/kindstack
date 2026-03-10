@@ -1,9 +1,9 @@
 :root {
   /* Color Scheme: #e8d7bc (Cream), Black, Orange */
-  --color-bg: #e8d7bc;         
+  --color-bg: #e7d8c1;         
   --color1: #000000;     
   --color2: 255, 165, 0;       
-  --circle-size: 80%;
+  --circle-size: 120%;
 }
 
 .gradient-bg {
@@ -54,6 +54,7 @@
   font-weight: 800;
   color: rgba(255, 255, 255, 0.808); 
   letter-spacing: -2px;
+  margin-top: 6rem;
 }
 
 /* Baunov's Blobs - Times reduced by 25% for speed */
@@ -81,18 +82,19 @@
   height: var(--circle-size);
   top: 20%;
   right: 10%;
-  /* Reduced from 20s to 15s */
   animation: moveInCircle 40s reverse infinite;
 }
 
 .interactive {
   position: absolute;
-  background: radial-gradient(circle at center, rgba(var(--color2), 0.7) 0, rgba(var(--color2), 0) 50%);
-  width: 100%;
-  height: 100%;
-  top: -50%;
-  left: -50%;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.7) 0, rgba(var(--color2), 0) 70%);
+  width: 150%; 
+  height: 150%;
+  top: calc(50% - 75%); 
+  left: calc(50% - 75%);
   mix-blend-mode: screen;
+  opacity: 0.8;
+  transition: none; 
 }
 
 @keyframes moveInCircle {

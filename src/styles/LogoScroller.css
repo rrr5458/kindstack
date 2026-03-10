@@ -3,7 +3,6 @@
 .scroller-root {
   width: 100%;
   background-color: #e8d7bc;
-  /* Increased from 16px to 32px to give larger logos breathing room */
   padding: 32px 0; 
   overflow: hidden;
   position: relative;

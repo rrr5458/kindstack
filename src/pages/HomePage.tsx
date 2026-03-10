@@ -12,8 +12,8 @@ const HomePage: React.FC = () => {
   return (
     <> 
       <Hero />
-      <AboutUs />
       <OtherServices />
+      <AboutUs />
       <PriceBlurb />
       <CTA_Footer />
       {/* Testimonials, etc., remain on the home page */}
