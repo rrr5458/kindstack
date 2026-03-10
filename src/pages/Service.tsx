@@ -18,7 +18,7 @@ interface ServiceProps {
 
 const Service: React.FC<ServiceProps> = ({ title, iconColor, description, details }) => {
   return (
-    <section className="service-hero-section" id="service-page" style={{ backgroundColor: 'var(--color-background)' }}>
+    <section className="service-hero-section" id="service-page">
       <div className="content-container-main">
         <div className="content-container-one">
           <div className="hero-title-one-container" style={{ width: '100%', marginRight: 0 }}>

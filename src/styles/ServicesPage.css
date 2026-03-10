@@ -9,6 +9,15 @@
     background-color: transparent;
 }
 
+.service-hero-section .content-container-one {
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.service-hero-section .content-container-two {
+    padding-top: 0;
+}
+
 .service-detail-grid {
     display: grid;
     /* Creates 3 responsive columns */
