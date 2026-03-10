@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/NewComponents.css';
+import '../styles/OtherServices.css';
 import PixelSmiley from './PixelSmiley';
 
 const services = [
@@ -20,21 +21,17 @@ const OtherServices: React.FC = () => {
         Contact us to learn more about how we can help you grow.
       </p>
 
-      {/*
-        This new wrapper uses auto-fit for a modern grid layout,
-        and standard Tailwind classes for styling that matches Services.tsx
-      */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid-rows-3 gap-8 w-[80%] max-w-[1200px] mt-12 mx-auto text-left">
+      <div className="other-services-grid">
         {services.map((service, index) => (
           <Link
             to={service.link}
             key={index}
-            className="flex flex-col md:flex-row items-center gap-6 p-8 bg-white border border-[#ccc] rounded-3xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:-translate-y-2 hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-all duration-300"
+            className="other-services-card"
           >
-            <div className="shrink-0">
+            <div className="other-services-icon">
               <PixelSmiley color={service.color} scale={4.5} />
             </div>
-            <h3 className="text-3xl font-bold text-[#333] tracking-tight">{service.title}</h3>
+            <h3 className="other-services-title">{service.title}</h3>
           </Link>
         ))}
       </div>
