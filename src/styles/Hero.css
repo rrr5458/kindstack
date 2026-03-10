@@ -158,9 +158,9 @@
 }
 
 .scroller-caption {
-    border-top: 3px solid black;
-    border-right: 3px solid black;
-    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 }
 
 /* Responsive adjustments */
@@ -224,7 +224,17 @@
   }
   .hero-sub-one {
     font-size: 1.8rem;
+    width: 50%;
   }
+
+  .cta-secondary-container-hero {
+    width: 50%;
+  }
+
+  .cta-secondary-hero {
+    font-size: 2rem;
+  }
+
   .content-container-two {
     padding: 2rem 2rem;
   }
@@ -239,6 +249,13 @@
   }
   .hero-sub-one {
     font-size: 1.5rem;
+  }
+
+  .cta-secondary-container-hero {
+    width: 55%;
+  }
+  .cta-secondary-hero {
+    font-size: 1.75rem;
   }
   .content-container-two {
     padding: 2rem 1rem;
