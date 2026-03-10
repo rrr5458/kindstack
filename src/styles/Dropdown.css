@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-/* ── Page wrapper ── */
 .dropdown-page {
   position: absolute;
   width: 85rem;
@@ -18,7 +17,6 @@
 
 }
 
-/* ── Card ── */
 .dropdown-card {
   background: #e9e2d6;
   padding: 1.5rem;
@@ -31,7 +29,6 @@
 
 }
 
-/* ── Divider between columns ── */
 .dropdown-divider {
   width: 1px;
   background: #f99a26;
@@ -39,7 +36,6 @@
   flex-shrink: 0;
 }
 
-/* ── Column ── */
 .dropdown-column {
   flex: 1;
   padding: 28px 32px;
@@ -48,7 +44,7 @@
 .dropdown-column__label {
   font-size: 30px;
   letter-spacing: 0.18em;
-  color: #718096; /* Medium gray */
+  color: #718096;
   margin: 0 0 20px 0;
 }
 
@@ -58,7 +54,6 @@
   gap: 4px;
 }
 
-/* ── Menu item ── */
 .dropdown-item {
   display: flex;
   align-items: flex-start;
@@ -71,7 +66,6 @@
   background: #e8d7bc;
 }
 
-/* ── Icon box ── */
 .dropdown-item__icon {
   width: 42px;
   height: 42px;
@@ -84,10 +78,8 @@
 
 .dropdown-item:hover .dropdown-item__icon {
   background: transparent;
-  /* border-color is set inline per-item to use the smiley's unique color */
 }
 
-/* ── Text ── */
 .dropdown-item__title {
   font-family: 'DM Sans', sans-serif;
   font-size: 26px;
@@ -160,36 +152,36 @@
 
 @media (max-width: 1020px) {
   .dropdown-page {
-    width: 60rem; /* Narrower width for smaller screens */
+    width: 60rem;
   }
 }
 @media (max-width: 991px) {
   .dropdown-page {
-    width: 60rem; /* Narrower width for smaller screens */
+    width: 60rem;
   }
   }
 
 
 @media (max-width: 998px) {
   .dropdown-page {
-    width: 55rem; /* Narrower and switches layout */
-    right: -2rem; /* Give space on right relative to burger icon */
+    width: 55rem;
+    right: -2rem;
   }
 
   }
 
 @media (max-width: 894px) {
   .dropdown-page {
-    width: 50rem; /* Narrower and switches layout */
-    right: -2rem; /* Give space on right relative to burger icon */
+    width: 50rem;
+    right: -2rem;
   }
 
   }
 
 @media (max-width: 767px) {
   .dropdown-page {
-    width: 35rem; /* Narrower and switches layout */
-    right: -2rem; /* Give space on right relative to burger icon */
+    width: 35rem;
+    right: -2rem;
   }
   .dropdown-card {
     flex-direction: column;
@@ -218,7 +210,7 @@
 @media (max-width: 575px) {
   .dropdown-page {
     width: 90vw;
-    right: -1rem; /* Closer to the edge */
+    right: -1rem;
   }
   .dropdown-column {
     padding: 8px 10px;

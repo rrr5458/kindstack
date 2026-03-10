@@ -43,7 +43,6 @@ const ManagedBackground = ({ title, subtitle }: ManagedBackgroundProps) => {
         <div className="g1"></div>
         <div className="g2"></div>
         <div className="g3"></div>
-        {/* The "interactive" blob is now the "floating" blob */}
         <div ref={interRef} className="interactive"></div>
       </div>
 

@@ -1,9 +1,6 @@
-// src/components/Header.tsx
-
 import React, { useState, useEffect } from "react";
 import "./../styles/Header.css";
 import { Link } from "react-router-dom";
-// import DownArrow from "./../shapes/DownArrow";
 import imgSroucePng from "../assets/3dsmiley.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Dropdown from "./Dropdown";
@@ -52,18 +49,7 @@ const Header: React.FC = () => {
         </div>
       </Link>
       <div className="middle-section">
-        {/* <Link to="/services" className="middle-link">
-          <span className="middle-link-text">Services</span>
-          <DownArrow isOpen={false} />
-        </Link>
-        <Link to="/services" className="middle-link">
-          <span className="middle-link-text">About</span>
-        </Link>
-        <Link to="/services" className="middle-link">
-          <span className="middle-link-text">Portfolio</span>
-        </Link> */}
       </div>
-
       <div className="right-section">
         <div className="cta-secondary-container">
           <Link to="/contact">

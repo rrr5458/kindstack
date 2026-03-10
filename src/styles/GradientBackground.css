@@ -1,5 +1,4 @@
 :root {
-  /* Color Scheme: #e8d7bc (Cream), Black, Orange */
   --color-bg: #e7d8c1;         
   --color1: #000000;     
   --color2: 255, 165, 0;       
@@ -17,7 +16,6 @@
   mask-image: radial-gradient(circle, black 60%, #f99a26 100%);
 }
 
-/* Grainy Texture from video */
 .gradient-bg::before {
   content: "";
   position: absolute;
@@ -47,7 +45,6 @@
   letter-spacing: -2px;
 }
 
-/* 50% Opacity White Text */
 .managed-text-sub {
   font-family: 'Inter', sans-serif;
   font-size: 2rem;
@@ -57,7 +54,6 @@
   margin-top: 6rem;
 }
 
-/* Baunov's Blobs - Times reduced by 25% for speed */
 .gradients-container {
   filter: url(#goo) blur(40px);
   width: 100%;
@@ -71,7 +67,6 @@
   height: var(--circle-size);
   top: 10%;
   left: 10%;
-  /* Reduced from 30s to 22.5s */
   animation: moveVertical 22.5s ease infinite; 
 }
 
