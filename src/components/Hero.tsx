@@ -22,42 +22,47 @@ const Hero: React.FC = () => {
           />
           <div className="hero-title-one-container">
             <h2 className="hero-title-one">
-              AI agents for magical customer experiences
+              AI That Actually Knows Your Business
             </h2>
             <span className="hero-sub-one">
-              For something like an industry and speciality for that
+              No coding. Simply sync your website or manuals and let our AI handle the rest.
             </span>
+            <div className="cta-secondary-container-hero">
+              <Link to="/contact">
+                <button className="cta-secondary-hero">Get a Demo</button>
+              </Link>
+            </div>
             <img
               src={circleImg}
               alt="Orange circle"
               height="300"
               width="300"
-              style={{ position: "absolute", bottom: -40 }}
+              style={{ position: "absolute", bottom: -200}}
               className="shape-br"
             />
           </div>
           <div className="hero-video-container">
             <video autoPlay loop muted playsInline className="hero-video">
               <source
-                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                src="https://cdn.prod.website-files.com/5c97e8c9de94e8a3480419a5/63c1b35938ee466aac93e225_new-full_10-transcode.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
             </video>
-            <div className="cta-secondary-container-hero">
-              <Link to="/contact">
-                <button className="cta-secondary-hero">CONTACT</button>
-              </Link>
-            </div>
           </div>
         </div>
-        <LogoScroller />
+        <div className="scroller-container">
+          <span className="scroller-caption">
+            WORKING ALONGSIDE
+          </span>
+          <LogoScroller />
+        </div>
         <div className="content-container-two">
           <div className="hero-gradient-overlay">
-            <GradientBackground />
+            <GradientBackground title={"Your Support Team’s New Secret Weapon"} subtitle={"Automate 80% of your customer queries. Our AI learns from your FAQ and help desk to provide instant, human-like responses 24/7"} />
           </div>
           <div className="hero-gradient-overlay">
-            <GradientBackground />
+            <GradientBackground title={"Your Knowledge, Now Conversational"} subtitle={"Turn your website, PDFs, and business manuals into a secure, private AI agent that answers customers with 100% factual accuracy"}/>
           </div>
         </div>
       </div>

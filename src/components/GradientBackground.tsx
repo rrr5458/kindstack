@@ -1,46 +1,49 @@
 import React, { useEffect, useRef } from 'react';
-import '../styles/GradientBackground.css'
+import '../styles/GradientBackground.css';
 
-const ManagedBackground: React.FC = () => {
+type ManagedBackgroundProps = {
+  title: string;
+  subtitle: string;
+};
+
+const ManagedBackground = ({ title, subtitle }: ManagedBackgroundProps) => {
   const interRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let curX = 0;
-    let curY = 0;
-    let tgX = 0;
-    let tgY = 0;
+    let animationFrameId: number;
+    
+    const radiusX = 80;
+    const radiusY = 60;
+    const speed = 0.0008;
 
-    const move = () => {
-      curX += (tgX - curX) / 15; // Slightly snappier tracking
-      curY += (tgY - curY) / 15;
+    const move = (time: number) => {
+
+      const tgX = Math.sin(time * speed) * radiusX;
+      const tgY = Math.cos(time * speed * 0.8) * radiusY;
+
       if (interRef.current) {
-        interRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+        interRef.current.style.transform = `translate(${Math.round(tgX)}px, ${Math.round(tgY)}px)`;
       }
-      requestAnimationFrame(move);
+      
+      animationFrameId = requestAnimationFrame(move);
     };
 
-    const handleMouseMove = (event: MouseEvent) => {
-      tgX = event.clientX;
-      tgY = event.clientY;
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    move();
-
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    animationFrameId = requestAnimationFrame(move);
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
     <div className="gradient-bg">
       <div className="content-overlay">
-        <h1 className="managed-text-title">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</h1>
-        <span className="managed-text-sub">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</span>
+        <h1 className="managed-text-title">{title}</h1>
+        <span className="managed-text-sub">{subtitle}</span>
       </div>
 
       <div className="gradients-container">
         <div className="g1"></div>
         <div className="g2"></div>
         <div className="g3"></div>
+        {/* The "interactive" blob is now the "floating" blob */}
         <div ref={interRef} className="interactive"></div>
       </div>
 
@@ -49,7 +52,6 @@ const ManagedBackground: React.FC = () => {
           <filter id="goo">
             <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
             <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-            <feBlend in="SourceGraphic" in2="goo" />
           </filter>
         </defs>
       </svg>
