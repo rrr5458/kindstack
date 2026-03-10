@@ -4,9 +4,10 @@ import '../styles/GradientBackground.css';
 type ManagedBackgroundProps = {
   title: string;
   subtitle: string;
+  children?: React.ReactNode;
 };
 
-const ManagedBackground = ({ title, subtitle }: ManagedBackgroundProps) => {
+const ManagedBackground = ({ title, subtitle, children }: ManagedBackgroundProps) => {
   const interRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const ManagedBackground = ({ title, subtitle }: ManagedBackgroundProps) => {
       <div className="content-overlay">
         <h1 className="managed-text-title">{title}</h1>
         <span className="managed-text-sub">{subtitle}</span>
+        {children}
       </div>
 
       <div className="gradients-container">

@@ -3,7 +3,7 @@ import './../styles/PageStyles.css';
 import './../styles/ServicesPage.css'; // Re-use the grid styling
 import './../styles/Hero.css'; // Add hero styling
 import PixelSmiley from '../components/PixelSmiley';
-import bgImg from "../assets/shapes_hero_image.png";
+import GradientBackground from '../components/GradientBackground';
 
 interface ServiceProps {
   title: string;
@@ -18,10 +18,7 @@ interface ServiceProps {
 
 const Service: React.FC<ServiceProps> = ({ title, iconColor, description, details }) => {
   return (
-    <section className="hero-section" id="service-page">
-      <div className="image-background">
-        <img src={bgImg} alt="Hero Background" className="hero-bg-img" />
-      </div>
+    <section className="service-hero-section" id="service-page" style={{ backgroundColor: 'var(--color-background)' }}>
       <div className="content-container-main">
         <div className="content-container-one">
           <div className="hero-title-one-container" style={{ width: '100%', marginRight: 0 }}>
@@ -38,14 +35,14 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
         <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
           <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
             {details.map((detail, index) => (
-              <div key={index} className="service-detail-card">
-                <h2>{detail.heading}</h2>
-                <p>{detail.text}</p>
-                <ul>
-                  {detail.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
+              <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto' }}>
+                <GradientBackground title={detail.heading} subtitle={detail.text}>
+                  <ul style={{ listStylePosition: 'inside', paddingLeft: 0, marginTop: '2rem' }}>
+                    {detail.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </GradientBackground>
               </div>
             ))}
           </div>
