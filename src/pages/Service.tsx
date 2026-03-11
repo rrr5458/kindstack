@@ -1,7 +1,9 @@
 import React from 'react';
 import './../styles/PageStyles.css';
-import './../styles/ServicesPage.css'; // Re-use the grid styling
+import './../styles/ServicesPage.css';
+import './../styles/Hero.css';
 import PixelSmiley from '../components/PixelSmiley';
+import GradientBackground from '../components/GradientBackground';
 
 interface ServiceProps {
   title: string;
@@ -16,27 +18,36 @@ interface ServiceProps {
 
 const Service: React.FC<ServiceProps> = ({ title, iconColor, description, details }) => {
   return (
-    <section className="page-container" id="service-page">
-      <header className="page-header">
-        <h1 style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <PixelSmiley color={iconColor} scale={4} />
-          {title}
-        </h1>
-        <p className="page-subtitle">{description}</p>
-      </header>
-
-      <div className="page-content service-detail-grid">
-        {details.map((detail, index) => (
-          <div key={index} className="service-detail-card">
-            <h2>{detail.heading}</h2>
-            <p>{detail.text}</p>
-            <ul>
-              {detail.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
+    <section className="service-hero-section" id="service-page">
+      <div className="content-container-main">
+        <div className="content-container-one-services">
+          <GradientBackground  title={details[0].heading} subtitle={details[0].text} blobColor={iconColor}/>
+          <div className="services-title-one-container" style={{ width: '100%', marginRight: 0 }}>
+            <h1 className="hero-title-one services-title">
+              {title}
+              <span style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                <PixelSmiley color={iconColor} scale={4} />
+              </span>
+            </h1>
+            <p className="hero-sub-one">{description}</p>
           </div>
-        ))}
+        </div>
+
+        <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+          <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
+            {details.map((detail, index) => (
+              <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto' }}>
+                <GradientBackground title={detail.heading} subtitle={detail.text} blobColor={iconColor}>
+                  <ul style={{ listStylePosition: 'inside', paddingLeft: 0, marginTop: '2rem' }}>
+                    {detail.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </GradientBackground>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

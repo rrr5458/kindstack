@@ -1,35 +1,48 @@
-/* src/styles/ServicesPage.css */
+.service-hero-section {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.content-container-one-services {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 5rem;
+  margin-top: 3rem;
+}
+
+.services-title-one-container {
+  position: relative;
+  width: 640;
+  margin-left: 4rem;
+}
+
+.services-title {
+    font-size: 4rem;
+    margin-right: 2rem;
+}
+
+.service-hero-section .content-container-one {
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.service-hero-section .content-container-two {
+    padding-top: 0;
+}
 
 .service-detail-grid {
     display: grid;
-    /* Creates 3 responsive columns */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
 }
 
-.service-detail-card {
-    padding: 2.5rem;
-    background-color: var(--color-light-gray);
-    border-radius: 12px;
-    /* Optional shadow to lift the card */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.service-detail-card h2 {
-    font-size: 1.8rem;
-    color: var(--color-text-dark);
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.service-detail-card ul {
-    list-style-type: square;
-    font-size: 1rem;
-    color: var(--color-text-light);
-}
-
-/* Responsive adjustments */
 @media (max-width: 991px) {
     .service-detail-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
