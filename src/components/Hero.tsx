@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
           <LogoScroller />
         </div>
         <div className="content-container-two">
-          <div className="hero-gradient-overlay">
+          <div className="hero-gradient-overlay" style={{marginRight: "5rem"}}>
             <GradientBackground title={"Your Support Team’s New Secret Weapon"} subtitle={"Automate 80% of your customer queries. Our AI learns from your FAQ and help desk to provide instant, human-like responses 24/7"} blobColor="#f99a26"/>
           </div>
           <div className="hero-gradient-overlay">
