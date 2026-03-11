@@ -19,7 +19,7 @@ interface ServiceProps {
 const Service: React.FC<ServiceProps> = ({ title, iconColor, description, details }) => {
   return (
     <section className="service-hero-section" id="service-page">
-      <div className="content-container-main">
+      <div className="content-container-main-services">
         <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
           <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
             <div className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
@@ -27,12 +27,14 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
             </div>
 
             <div className="services-title-one-container" style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <h1 className="hero-title-one services-title">
-                {title}
-                <span style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-                  <PixelSmiley color={iconColor} scale={4} />
-                </span>
-              </h1>
+              <div style={{display: "flex", alignItems: "center", width: "70%"}}>
+                <h1 className="hero-title-one services-title">
+                  {title}
+                </h1>
+                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                    <PixelSmiley color={iconColor} scale={6} />
+                  </span>
+              </div>
               <p className="hero-sub-one">{description}</p>
             </div>
 

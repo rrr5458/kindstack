@@ -7,6 +7,10 @@
     background-color: transparent;
 }
 
+.content-container-main-services {
+    margin-top: 5rem;
+}
+
 .content-container-one-services {
   display: flex;
   width: 100%;
@@ -21,8 +25,8 @@
 }
 
 .services-title {
+    width: 100%;
     font-size: 4rem;
-    margin-right: 2rem;
 }
 
 .service-hero-section .content-container-one {
