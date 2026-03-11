@@ -1,7 +1,7 @@
 import React from 'react';
 import './../styles/PageStyles.css';
-import './../styles/ServicesPage.css'; // Re-use the grid styling
-import './../styles/Hero.css'; // Add hero styling
+import './../styles/ServicesPage.css';
+import './../styles/Hero.css';
 import PixelSmiley from '../components/PixelSmiley';
 import GradientBackground from '../components/GradientBackground';
 
@@ -20,13 +20,14 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
   return (
     <section className="service-hero-section" id="service-page">
       <div className="content-container-main">
-        <div className="content-container-one">
-          <div className="hero-title-one-container" style={{ width: '100%', marginRight: 0 }}>
-            <h1 className="hero-title-one">
-              <span style={{ display: 'inline-block', marginRight: '1rem', verticalAlign: 'middle' }}>
+        <div className="content-container-one-services">
+          <GradientBackground  title={details[0].heading} subtitle={details[0].text} blobColor={iconColor}/>
+          <div className="services-title-one-container" style={{ width: '100%', marginRight: 0 }}>
+            <h1 className="hero-title-one services-title">
+              {title}
+              <span style={{ display: 'inline-block', verticalAlign: 'middle' }}>
                 <PixelSmiley color={iconColor} scale={4} />
               </span>
-              {title}
             </h1>
             <p className="hero-sub-one">{description}</p>
           </div>
@@ -36,7 +37,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
           <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
             {details.map((detail, index) => (
               <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto' }}>
-                <GradientBackground title={detail.heading} subtitle={detail.text}>
+                <GradientBackground title={detail.heading} subtitle={detail.text} blobColor={iconColor}>
                   <ul style={{ listStylePosition: 'inside', paddingLeft: 0, marginTop: '2rem' }}>
                     {detail.points.map((point, i) => (
                       <li key={i}>{point}</li>

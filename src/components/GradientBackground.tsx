@@ -5,10 +5,15 @@ type ManagedBackgroundProps = {
   title: string;
   subtitle: string;
   children?: React.ReactNode;
+  blobColor?: string
 };
 
-const ManagedBackground = ({ title, subtitle, children }: ManagedBackgroundProps) => {
+const ManagedBackground = ({ title, subtitle, children, blobColor }: ManagedBackgroundProps) => {
   const interRef = useRef<HTMLDivElement>(null);
+
+  const blobColorStyle = {
+    "--color2": blobColor
+  } as React.CSSProperties;
 
   useEffect(() => {
     let animationFrameId: number;
@@ -34,7 +39,7 @@ const ManagedBackground = ({ title, subtitle, children }: ManagedBackgroundProps
   }, []);
 
   return (
-    <div className="gradient-bg">
+    <div className="gradient-bg" style={blobColorStyle}>
       <div className="content-overlay">
         <h1 className="managed-text-title">{title}</h1>
         <span className="managed-text-sub">{subtitle}</span>

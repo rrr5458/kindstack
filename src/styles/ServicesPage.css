@@ -1,5 +1,3 @@
-/* src/styles/ServicesPage.css */
-
 .service-hero-section {
     position: relative;
     display: flex;
@@ -7,6 +5,26 @@
     width: 100%;
     overflow: hidden;
     background-color: transparent;
+}
+
+.content-container-one-services {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 5rem;
+  margin-top: 3rem;
+}
+
+.services-title-one-container {
+  position: relative;
+  width: 640;
+  margin-left: 4rem;
+}
+
+.services-title {
+    font-size: 4rem;
+    margin-right: 2rem;
 }
 
 .service-hero-section .content-container-one {
@@ -20,13 +38,11 @@
 
 .service-detail-grid {
     display: grid;
-    /* Creates 3 responsive columns */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 991px) {
     .service-detail-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
