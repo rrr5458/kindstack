@@ -18,8 +18,6 @@
 
 .services-title-one-container {
   position: relative;
-  width: 640;
-  margin-left: 4rem;
 }
 
 .services-title {
@@ -39,6 +37,7 @@
 .service-detail-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 3rem;
     margin-top: 3rem;
 }

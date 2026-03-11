@@ -21,8 +21,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
     <section className="service-hero-section" id="service-page">
       <div className="content-container-main">
         <div className="content-container-one-services">
-          <GradientBackground  title={details[0].heading} subtitle={details[0].text} blobColor={iconColor}/>
-          <div className="services-title-one-container" style={{ width: '100%', marginRight: 0 }}>
+          <div className="services-title-one-container" style={{ width: '100%' }}>
             <h1 className="hero-title-one services-title">
               {title}
               <span style={{ display: 'inline-block', verticalAlign: 'middle' }}>
@@ -36,7 +35,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
         <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
           <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
             {details.map((detail, index) => (
-              <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto' }}>
+              <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <GradientBackground title={detail.heading} subtitle={detail.text} blobColor={iconColor}>
                   <ul style={{ listStylePosition: 'inside', paddingLeft: 0, marginTop: '2rem' }}>
                     {detail.points.map((point, i) => (
