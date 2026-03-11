@@ -12,12 +12,12 @@ const CTA_Footer: React.FC = () => {
 
   return (
     <section className="cta-footer-section">
-      <div className="content-wrapper">
+      <div className="cta-content-wrapper">
         <div className="text-content">
           <h2 className="cta-title">Ready to Launch Your Next Project?</h2>
           <p className="cta-subtitle">
-            Let’s discuss how modern web development can help your small business or startup grow faster.
-            **Get a free, no-obligation quote today.**
+            Let’s discuss how modern web development can help your small business or startup grow faster.<br/><br/>
+            <strong>Get a free, no-obligation quote today.</strong>
           </p>
         </div>
         
