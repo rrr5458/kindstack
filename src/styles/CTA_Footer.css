@@ -2,58 +2,79 @@
 
 .cta-footer-section {
     padding: 6rem 5%;
-    background-color: var(--color-primary); /* Use primary color for high visibility */
-    color: var(--color-background); /* White text on primary background */
+    background-color: #f6edde; /* Match lighter contrast background similar to Contact page card */
+    color: var(--color-text-dark); /* Dark text for contrast */
     text-align: center;
 }
 
-.content-wrapper {
-    max-width: 1000px;
+.cta-footer-section .cta-content-wrapper,
+.cta-footer-section .text-content,
+.cta-footer-section .cta-title,
+.cta-footer-section .cta-subtitle,
+.cta-footer-section .cta-subtitle strong,
+.cta-footer-section .cta-form,
+.cta-footer-section .cta-form input,
+.cta-footer-section .cta-form textarea {
+    color: #1E2125 !important;
+}
+
+.cta-footer-section .cta-form .submit-button {
+    color: #FFFFFF !important;
+}
+
+.cta-content-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
 }
 
-.text-content {
+.cta-footer-section .text-content {
     flex: 1;
     text-align: left;
 }
 
 .cta-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-background);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 .cta-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     opacity: 0.9;
     line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 .cta-form {
     flex: 1;
-    background-color: var(--color-background); /* White form box for contrast */
-    padding: 2.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Explicitly hardcode to white to ignore global dark mode */
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-light-gray);
+    width: 100%;
 }
 
-.form-group {
-    margin-bottom: 1rem;
+.cta-form .form-group {
+    margin-bottom: 1.5rem;
 }
 
 .cta-form input[type="text"],
 .cta-form input[type="email"],
 .cta-form textarea {
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid var(--color-light-gray);
-    border-radius: 6px;
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
     font-family: var(--font-body);
     font-size: 1rem;
-    color: var(--color-text-dark);
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-form textarea {
@@ -64,28 +85,29 @@
 .cta-form textarea:focus {
     border-color: var(--color-primary);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 3px rgba(249, 154, 38, 0.2);
 }
 
 .submit-button {
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 /* Responsive adjustments */
 @media (max-width: 991px) {
-    .content-wrapper {
+    .cta-content-wrapper {
         flex-direction: column;
-        gap: 2rem;
+        gap: 3rem;
     }
-    .text-content {
+    .cta-footer-section .text-content {
         text-align: center;
     }
 }
 
 @media (max-width: 767px) {
     .cta-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
 
@@ -97,6 +119,6 @@
         font-size: 1.8rem;
     }
     .cta-form {
-        padding: 1.5rem;
+        padding: 2rem;
     }
 }
