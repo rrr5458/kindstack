@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './../styles/PageStyles.css';
+import './../styles/ContactPage.css';
 
 const ContactPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -11,7 +12,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <section className="page-container" id="contact-page">
+    <section className="page-container contact-page-wrapper" id="contact-page">
       <header className="page-header">
         <h1>Let's Build Your Next Digital Project</h1>
         <p className="page-subtitle">Fill out the form below to get a free consultation and project estimate.</p>
@@ -50,13 +51,13 @@ const ContactPage: React.FC = () => {
           <h2>Prefer to talk?</h2>
           <p>We're available for a quick chat to discuss your needs.</p>
           <p>
-            **Email:** <a href="mailto:contact@kindstack.com">contact@kindstack.com</a>
+            <strong>Email:</strong> <br/><a href="mailto:contact@kindstack.com">contact@kindstack.com</a>
           </p>
           <p>
-            **Phone:** <a href="tel:+15551234567">(555) 123-4567</a>
+            <strong>Phone:</strong> <br/><a href="tel:+15551234567">(555) 123-4567</a>
           </p>
           <div className="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
           </div>
         </div>
