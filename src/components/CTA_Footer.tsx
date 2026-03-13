@@ -4,7 +4,7 @@ import React from 'react';
 import './../styles/CTA_Footer.css';
 
 const CTA_Footer: React.FC = () => {
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby0CVafsKcyZuQAokCHeBsy3rNkuovPR_9uSVK3cISjHfnsZ0wwjkc5vVsLfJWUfY33/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxpnTw6SDdPmowN_oBeK4uLMQuZv0QMX9Ufc8OLwvG47n99QBohPmBCE9oVzWYGHURt/exec';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
