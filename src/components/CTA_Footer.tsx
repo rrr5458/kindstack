@@ -4,10 +4,34 @@ import React from 'react';
 import './../styles/CTA_Footer.css';
 
 const CTA_Footer: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby0CVafsKcyZuQAokCHeBsy3rNkuovPR_9uSVK3cISjHfnsZ0wwjkc5vVsLfJWUfY33/exec';
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Logic to handle form submission (e.g., sending data to an API endpoint)
-    alert('Thank you for your interest! We will be in touch shortly.');
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(data),
+      });
+      alert('Thank you for your interest! We will be in touch shortly.');
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your inquiry. Please try again later.');
+    }
   };
 
   return (
@@ -25,6 +49,7 @@ const CTA_Footer: React.FC = () => {
           <div className="form-group">
             <input 
               type="text" 
+              name="name"
               placeholder="Your Name" 
               required 
               aria-label="Your Name"
@@ -33,6 +58,7 @@ const CTA_Footer: React.FC = () => {
           <div className="form-group">
             <input 
               type="email" 
+              name="email"
               placeholder="Your Business Email" 
               required 
               aria-label="Your Business Email"
@@ -40,6 +66,7 @@ const CTA_Footer: React.FC = () => {
           </div>
           <div className="form-group">
             <textarea 
+              name="message"
               placeholder="Tell us briefly about your project (e.g., New Website, Bug Fixes)" 
               rows={3}
               required 
