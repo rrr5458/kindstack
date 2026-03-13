@@ -5,10 +5,35 @@ import './../styles/PageStyles.css';
 import './../styles/ContactPage.css';
 
 const ContactPage: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Logic to handle form submission (e.g., sending data to an API)
-    alert('Inquiry sent! We will respond within one business day.');
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      projectType: formData.get('projectType'),
+      message: formData.get('message'),
+    };
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(data),
+      });
+      alert('Inquiry sent! We will respond within one business day.');
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your inquiry. Please try again later.');
+    }
   };
 
   return (
@@ -22,15 +47,15 @@ const ContactPage: React.FC = () => {
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Your Name</label>
-            <input type="text" id="name" required />
+            <input type="text" id="name" name="name" required />
           </div>
           <div className="form-group">
             <label htmlFor="email">Business Email</label>
-            <input type="email" id="email" required />
+            <input type="email" id="email" name="email" required />
           </div>
           <div className="form-group">
             <label htmlFor="project-type">Project Type</label>
-            <select id="project-type" required>
+            <select id="project-type" name="projectType" required>
               <option value="" disabled>Select a service</option>
               <option value="new">New Website Build</option>
               <option value="feature">Feature Enhancement</option>
@@ -40,7 +65,7 @@ const ContactPage: React.FC = () => {
           </div>
           <div className="form-group">
             <label htmlFor="details">Project Details / Goals</label>
-            <textarea id="details" rows={5} required />
+            <textarea id="details" name="message" rows={5} required />
           </div>
           <button type="submit" className="cta-primary submit-button">
             Send Project Inquiry
