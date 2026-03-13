@@ -5,7 +5,7 @@ import './../styles/PageStyles.css';
 import './../styles/ContactPage.css';
 
 const ContactPage: React.FC = () => {
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby0CVafsKcyZuQAokCHeBsy3rNkuovPR_9uSVK3cISjHfnsZ0wwjkc5vVsLfJWUfY33/exec';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
