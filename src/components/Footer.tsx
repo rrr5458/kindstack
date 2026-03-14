@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './../styles/Footer.css';
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -12,14 +13,15 @@ const Footer: React.FC = () => {
         
         {/* Column 1: Logo and Company Info */}
         <div className="footer-column info-column">
-          <h4 className="footer-logo">
-            <span style={{ color: "#f99a26", WebkitTextStroke: "1px black" }}>KindStack</span> WebSolutions
-          </h4>
+          <div className="logo">
+            <h1>
+              <span className="brand-accent">KindStack</span>
+              <span className="brand-tagline">WebSolutions</span>
+            </h1>
+          </div>
           <p className="tagline">Modern web development and AI automation built for growth.</p>
           <div className="social-links">
-            <a href="https://linkedin.com" aria-label="LinkedIn">🔗</a>
-            <a href="https://twitter.com" aria-label="Twitter">🐦</a>
-            <a href="https://github.com" aria-label="GitHub">⭐</a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin /></a>
           </div>
         </div>
 
@@ -27,8 +29,7 @@ const Footer: React.FC = () => {
         <div className="footer-column">
           <h4 className="column-title">Quick Links</h4>
           <ul>
-            <li><a href="/services">Our Services</a></li>
-            <li><a href="/portfolio">Case Studies</a></li>
+            <li><a href="/#other-services">Our Services</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
