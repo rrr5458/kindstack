@@ -5,5 +5,5 @@ with sync_playwright() as p:
     page = browser.new_page(viewport={"width": 1600, "height": 900})
     page.goto("http://localhost:3000/contact")
     page.wait_for_timeout(1000)
-    page.screenshot(path="wide_screenshot_new.png")
+    page.screenshot(path="wide_screenshot_new_padding.png")
     browser.close()

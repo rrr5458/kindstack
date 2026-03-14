@@ -4,6 +4,8 @@
     color: var(--color-text-dark);
     background-color: #e78dc1;
     width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .contact-layout {
