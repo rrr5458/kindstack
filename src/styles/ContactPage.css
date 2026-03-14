@@ -2,7 +2,7 @@
 
 #contact-page {
     color: var(--color-text-dark);
-    background-color: var(--color-background);
+    background-color: #f6edde;
 }
 
 .contact-layout {
@@ -40,12 +40,12 @@
 .contact-form textarea {
     width: 100%;
     padding: 1rem;
-    border: 1px solid var(--color-light-gray);
+    border: 1px solid #d1d5db;
     border-radius: 8px;
     font-family: var(--font-body);
     font-size: 1rem;
     color: var(--color-text-dark);
-    background-color: var(--color-background);
+    background-color: #fafafa;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -58,7 +58,8 @@
 .contact-form textarea:focus {
     border-color: var(--color-primary);
     outline: none;
-    background-color: var(--color-background);
+    background-color: var(--color-background) !important;
+    box-shadow: 0 0 0 3px rgba(249, 154, 38, 0.2);
 }
 
 .submit-button {
@@ -66,11 +67,12 @@
 }
 
 .contact-info-card {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-background);
     color: var(--color-text-dark);
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-light-gray);
 }
 
 .contact-info-card h2 {
