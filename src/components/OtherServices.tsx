@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: "Automations and Plugins",
-    color: "#ff8c42",
+    color: "#eee6e1ff",
     link: "/services/automations-and-plugins",
   },
   {
