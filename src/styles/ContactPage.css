@@ -5,23 +5,6 @@
     background-color: var(--color-background);
 }
 
-.contact-page-wrapper,
-.contact-page-wrapper h1,
-.contact-page-wrapper .page-subtitle,
-.contact-page-wrapper h2,
-.contact-page-wrapper h3,
-.contact-page-wrapper p,
-.contact-page-wrapper label,
-.contact-page-wrapper input,
-.contact-page-wrapper select,
-.contact-page-wrapper textarea {
-    color: #1E2125 !important;
-}
-
-.contact-page-wrapper .cta-primary {
-    color: #FFFFFF !important;
-}
-
 .contact-layout {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -57,12 +40,12 @@
 .contact-form textarea {
     width: 100%;
     padding: 1rem;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--color-light-gray);
     border-radius: 8px;
     font-family: var(--font-body);
     font-size: 1rem;
     color: var(--color-text-dark);
-    background-color: #fafafa;
+    background-color: var(--color-background);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -76,7 +59,6 @@
     border-color: var(--color-primary);
     outline: none;
     background-color: var(--color-background);
-    box-shadow: 0 0 0 3px rgba(249, 154, 38, 0.2);
 }
 
 .submit-button {
@@ -84,7 +66,7 @@
 }
 
 .contact-info-card {
-    background-color: #f6edde;
+    background-color: var(--color-light-gray);
     color: var(--color-text-dark);
     padding: 3rem;
     border-radius: 12px;
