@@ -2,7 +2,8 @@
 
 #contact-page {
     color: var(--color-text-dark);
-    background-color: #f6edde;
+    background-color: #e78dc1;
+    width: 100%;
 }
 
 .contact-layout {
