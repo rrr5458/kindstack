@@ -9,6 +9,10 @@ interface ServiceProps {
   title: string;
   iconColor: string;
   description: string;
+  prices: {
+    heading: string;
+    subheading: string;
+  }
   details: {
     heading: string;
     text: string;
@@ -16,14 +20,14 @@ interface ServiceProps {
   }[];
 }
 
-const Service: React.FC<ServiceProps> = ({ title, iconColor, description, details }) => {
+const Service: React.FC<ServiceProps> = ({ title, iconColor, description, details, prices }) => {
   return (
     <section className="service-hero-section" id="service-page">
       <div className="content-container-main-services">
         <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
           <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
             <div className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
-              <GradientBackground title={details[0].heading} subtitle={details[0].text} blobColor={iconColor} />
+              <GradientBackground title={prices.heading} subtitle={prices.subheading} blobColor={iconColor} />
             </div>
 
             <div className="services-title-one-container" style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>

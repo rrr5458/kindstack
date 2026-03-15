@@ -16,7 +16,6 @@ const Footer: React.FC = () => {
           <div className="logo">
             <h1>
               <span className="brand-accent">KindStack</span>
-              <span className="brand-tagline">WebSolutions</span>
             </h1>
           </div>
           <p className="tagline">Modern web development and AI automation built for growth.</p>

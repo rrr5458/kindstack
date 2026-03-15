@@ -84,7 +84,6 @@ const ContactPage: React.FC = () => {
           </p>
             <div className="social-links">
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
             </div>
           </div>
         </div>
