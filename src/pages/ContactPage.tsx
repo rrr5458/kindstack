@@ -37,14 +37,15 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <section className="page-container contact-page-wrapper" id="contact-page">
-      <header className="page-header">
-        <h1>Let's Build Your Next Digital Project</h1>
-        <p className="page-subtitle">Fill out the form below to get a free consultation and project estimate.</p>
-      </header>
-      
-      <div className="page-content contact-layout">
-        <form className="contact-form" onSubmit={handleSubmit}>
+    <section className="contact-page-wrapper" id="contact-page">
+      <div className="contact-page-container">
+        <header className="page-header">
+          <h1>Let's Build Your Next Digital Project</h1>
+          <p className="page-subtitle">Fill out the form below to get a free consultation and project estimate.</p>
+        </header>
+
+        <div className="page-content contact-layout">
+          <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Your Name</label>
             <input type="text" id="name" name="name" required />
@@ -81,9 +82,10 @@ const ContactPage: React.FC = () => {
           <p>
             <strong>Phone:</strong> <br/><a href="tel:+15551234567">(555) 123-4567</a>
           </p>
-          <div className="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <div className="social-links">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            </div>
           </div>
         </div>
       </div>
