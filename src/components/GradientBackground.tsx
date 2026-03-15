@@ -13,6 +13,7 @@ const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: Man
   const interRef = useRef<HTMLDivElement>(null);
 
   const blobColorStyle = {
+    height: prices ? "65%" : "100%",
     "--color2": blobColor
   } as React.CSSProperties;
 

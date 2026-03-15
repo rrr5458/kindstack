@@ -26,7 +26,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
       <div className="content-container-main-services">
         <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
           <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
-            <div className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center' }}>
               <GradientBackground title={prices.heading} subtitle={prices.subheading} blobColor={iconColor} prices={true} />
             </div>
 
