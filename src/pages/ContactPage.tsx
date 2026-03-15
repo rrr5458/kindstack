@@ -38,7 +38,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <section className="contact-page-wrapper" id="contact-page">
-      <div className="page-container">
+      <div className="contact-page-container">
         <header className="page-header">
           <h1>Let's Build Your Next Digital Project</h1>
           <p className="page-subtitle">Fill out the form below to get a free consultation and project estimate.</p>

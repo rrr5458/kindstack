@@ -1,17 +1,18 @@
-/* src/styles/ContactPage.css */
+.contact-page-container {
+    padding: 3rem
+}
 
 #contact-page {
     color: var(--color-text-dark);
-    background-color: #e78dc1;
+    background-color: #e8d7bc;;
     width: 100%;
-    padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
 .contact-layout {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
+    gap: 8rem;
     align-items: flex-start;
     margin-top: 2rem;
 }
@@ -19,7 +20,7 @@
 .contact-form {
     background-color: var(--color-background);
     color: var(--color-text-dark);
-    padding: 3rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--color-light-gray);
