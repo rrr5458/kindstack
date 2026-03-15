@@ -27,7 +27,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
         <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
           <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
             <div className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
-              <GradientBackground title={prices.heading} subtitle={prices.subheading} blobColor={iconColor} />
+              <GradientBackground title={prices.heading} subtitle={prices.subheading} blobColor={iconColor} prices={true} />
             </div>
 
             <div className="services-title-one-container" style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -45,7 +45,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
             {details.map((detail, index) => (
               <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <GradientBackground title={detail.heading} subtitle={detail.text} blobColor={iconColor}>
-                  <ul style={{ listStylePosition: 'inside', paddingLeft: 0, marginTop: '2rem' }}>
+                  <ul style={{ listStylePosition: 'outside', paddingLeft: '2rem', marginTop: '2rem', textAlign: 'left' }}>
                     {detail.points.map((point, i) => (
                       <li key={i}>{point}</li>
                     ))}
