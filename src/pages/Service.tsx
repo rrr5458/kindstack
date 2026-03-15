@@ -45,7 +45,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
             {details.map((detail, index) => (
               <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <GradientBackground title={detail.heading} subtitle={detail.text} blobColor={iconColor}>
-                  <ul style={{ listStylePosition: 'inside', paddingLeft: 0, marginTop: '2rem' }}>
+                  <ul style={{ listStylePosition: 'outside', paddingLeft: '2rem', marginTop: '2rem', textAlign: 'left' }}>
                     {detail.points.map((point, i) => (
                       <li key={i}>{point}</li>
                     ))}
