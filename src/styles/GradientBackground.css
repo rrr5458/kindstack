@@ -54,6 +54,18 @@ position: relative;
   margin-top: 6rem;
 }
 
+.prices-text {
+  font-size: 4rem;
+}
+
+.content-overlay li {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.808);
+  letter-spacing: -2px;
+}
+
 .gradients-container {
   /* This stays absolute so it sits BEHIND the content */
   position: absolute;

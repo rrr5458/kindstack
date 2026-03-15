@@ -5,10 +5,11 @@ type ManagedBackgroundProps = {
   title: string;
   subtitle: string;
   children?: React.ReactNode;
-  blobColor?: string
+  blobColor?: string;
+  prices?: boolean;
 };
 
-const ManagedBackground = ({ title, subtitle, children, blobColor }: ManagedBackgroundProps) => {
+const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: ManagedBackgroundProps) => {
   const interRef = useRef<HTMLDivElement>(null);
 
   const blobColorStyle = {
@@ -41,8 +42,8 @@ const ManagedBackground = ({ title, subtitle, children, blobColor }: ManagedBack
   return (
     <div className="gradient-bg" style={blobColorStyle}>
       <div className="content-overlay">
-        <h1 className="managed-text-title">{title}</h1>
-        <span className="managed-text-sub">{subtitle}</span>
+        <h1 className={`managed-text-title ${prices ? 'prices-text' : ''}`}>{title}</h1>
+        <span className={`managed-text-sub ${prices ? 'prices-text' : ''}`}>{subtitle}</span>
         {children}
       </div>
 
