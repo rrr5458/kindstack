@@ -1,7 +1,7 @@
 :root {
-  --color-bg: #e7d8c1;         
-  --color1: #df9f40;     
-  --color2: #f99a26;    
+  --color-bg: #e7d8c1;
+  --color1: #df9f40;
+  --color2: #f99a26;
   --circle-size: 120%;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .content-overlay {
-position: relative;
+  position: relative;
   z-index: 10;
   width: 100%;
   height: 100%;
@@ -37,28 +37,29 @@ position: relative;
 }
 
 .managed-text-title {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 3rem;
   font-weight: 800;
-  color: rgba(0, 0, 0, 0.832); 
+  color: rgba(0, 0, 0, 0.832);
   letter-spacing: -2px;
 }
 
 .managed-text-sub {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.808); 
+  color: rgba(255, 255, 255, 0.808);
   letter-spacing: -2px;
   margin-top: 6rem;
 }
 
 .prices-text {
-  font-size: 4rem;
+  font-size: 3rem;
+  margin-top: 1rem;
 }
 
 .content-overlay li {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.808);
@@ -66,66 +67,80 @@ position: relative;
 }
 
 .gradients-container {
-  /* This stays absolute so it sits BEHIND the content */
   position: absolute;
   top: 0;
   left: 0;
   filter: url(#goo) blur(40px);
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensure it is behind the relative content-overlay */
+  z-index: 1;
 }
 
 .g1 {
   position: absolute;
   background: radial-gradient(
-    circle at center, 
-    color-mix(in srgb, var(--color1), transparent 50%) 0%, 
+    circle at center,
+    color-mix(in srgb, var(--color1), transparent 50%) 0%,
     color-mix(in srgb, var(--color1), transparent 100%) 50%
   );
   width: var(--circle-size);
   height: var(--circle-size);
   top: 10%;
   left: 10%;
-  animation: moveVertical 22.5s ease infinite; 
+  animation: moveVertical 22.5s ease infinite;
 }
 
 .g2 {
   position: absolute;
   background: radial-gradient(
-    circle at center, 
-    color-mix(in srgb, var(--color2), transparent 50%) 0%, 
+    circle at center,
+    color-mix(in srgb, var(--color2), transparent 50%) 0%,
     color-mix(in srgb, var(--color2), transparent 100%) 50%
-  );  width: var(--circle-size);
+  );
+  width: var(--circle-size);
   height: var(--circle-size);
   top: 20%;
   right: 10%;
   animation: moveInCircle 40s reverse infinite;
 }
 
+.svg-display-none {
+  display: none;
+}
+
 .interactive {
   position: absolute;
   background: radial-gradient(
-      circle at center, 
-      color-mix(in srgb, var(--color2), transparent 30%) 0%, 
-      color-mix(in srgb, var(--color2), transparent 100%) 70%
-    );
-  width: 150%; 
+    circle at center,
+    color-mix(in srgb, var(--color2), transparent 30%) 0%,
+    color-mix(in srgb, var(--color2), transparent 100%) 70%
+  );
+  width: 150%;
   height: 150%;
-  top: calc(50% - 75%); 
+  top: calc(50% - 75%);
   left: calc(50% - 75%);
   mix-blend-mode: screen;
   opacity: 0.8;
-  transition: none; 
+  transition: none;
 }
 
 @keyframes moveInCircle {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes moveVertical {
-  0% { transform: translateY(-30%); }
-  50% { transform: translateY(30%); }
-  100% { transform: translateY(-30%); }
+  0% {
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(-30%);
+  }
 }

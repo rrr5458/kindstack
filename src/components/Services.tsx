@@ -1,11 +1,11 @@
-// src/components/Services.tsx
+
 
 import React from 'react';
 import './../styles/Services.css';
 
-// Define the type for a single service item for type safety
+
 interface ServiceItem {
-  icon: string; // Using a simple emoji/string for the icon placeholder
+  icon: string;
   title: string;
   description: string;
 }
@@ -49,7 +49,7 @@ const Services: React.FC = () => {
         ))}
       </div>
       
-      {/* Secondary CTA relevant to services */}
+      {}
       <button className="cta-secondary services-cta">
         See Our Full Service Breakdown
       </button>

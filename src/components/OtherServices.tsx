@@ -36,7 +36,7 @@ const OtherServices: React.FC = () => {
           <div
             key={i}
             className="divider-dash"
-            style={{ backgroundColor: item.color }}
+            style={{ backgroundColor: item.color } as React.CSSProperties}
           />
         ))}
       </div>

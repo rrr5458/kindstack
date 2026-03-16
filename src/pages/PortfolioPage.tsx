@@ -1,11 +1,11 @@
-// src/pages/PortfolioPage.tsx
+
 
 import React from 'react';
 import './../styles/PageStyles.css';
 import { Link } from "react-router-dom";
-import './../styles/PortfolioPage.css'; // Add this line
+import './../styles/PortfolioPage.css';
 
-// Define a type for a case study item
+
 interface CaseStudy {
   title: string;
   client: string;
