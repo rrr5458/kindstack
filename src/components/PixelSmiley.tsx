@@ -1,7 +1,7 @@
-// src/components/PixelSmiley.tsx
 
-// ── 8-bit pixel smiley face ──────────────────────────────────────────────────
-// Grid is 10×10: 0 = transparent, 1 = face fill, 2 = black pixel
+
+
+
 export default function PixelSmiley({ color, scale = 2.2 }: { color: string, scale?: number }) {
   const grid = [
     [0,0,0,2,2,2,2,0,0,0],

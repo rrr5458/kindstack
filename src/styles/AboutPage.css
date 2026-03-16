@@ -1,8 +1,8 @@
-/* src/styles/AboutPage.css */
 
-/* .value-list is used in the AboutPage component */
+
+
 .value-list {
-    list-style-type: '👉'; /* Custom bullet point */
+    list-style-type: '👉';
     color: var(--color-primary);
 }
 

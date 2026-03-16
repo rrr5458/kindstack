@@ -1,4 +1,4 @@
-/* src/styles/OtherServices.css */
+
 
 .other-services-grid {
   display: grid;
@@ -15,11 +15,11 @@
 
 .section-divider {
   width: 100%;
-  height: 8px; /* Adjust thickness as needed */
+  height: 8px;
   border-radius: 2px;
-  margin-bottom: 3rem; /* Space between divider and title */
+  margin-bottom: 3rem;
 
-  /* A smooth gradient from coral to purple */
+
   background: linear-gradient(
     90deg,
     #ff5f6e 20%,
@@ -30,31 +30,31 @@
   );
 }
 
-/* Ensure the section container handles the top spacing correctly */
+
 .new-section-container {
   padding-top: 2rem;
   position: relative;
 }
 
-/* Container for the dashes */
+
 .dash-divider-container {
   display: flex;
   justify-content: space-around;
-  gap: 12px; /* Space between dashes */
-  margin-bottom: 3rem; /* Space below the divider */
+  gap: 12px;
+  margin-bottom: 3rem;
   width: 100%;
 }
 
-/* Individual dash styling */
+
 .divider-dash {
-  width: 5rem; /* Width of each dash */
-  height: 6px; /* Thickness */
-  border-radius: 3px; /* Rounded ends for a "pill" look */
+  width: 5rem;
+  height: 6px;
+  border-radius: 3px;
   opacity: 0.9;
   transition: transform 0.3s ease;
 }
 
-/* Subtle hover effect for extra polish */
+
 .dash-divider-container:hover .divider-dash {
   transform: scaleY(1.2);
 }

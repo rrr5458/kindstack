@@ -1,47 +1,47 @@
-/* src/styles/main.css */
 
-/* Global Reset and Box Sizing */
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Variables for Color Palette and Typography */
+
 :root {
-    /* Primary brand color (use for CTAs, highlights) */
-    --color-primary: #f99a26; /* Electric Blue/Dodger Blue */
-    /* Secondary accent color (subtle contrast) */
-    --color-secondary: #f8af11; /* Deep Sky Blue */
-    /* Backgrounds */
+
+    --color-primary: #f99a26;
+
+    --color-secondary: #f8af11;
+
     --color-background: #FFFFFF;
     --color-light-gray: #F4F7F9;
-    /* Text */
+
     --color-text-dark: #1E2125;
     --color-text-light: #5C6773;
 
-    /* Typography */
+
     --font-heading: 'Inter', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
 
-/* Base Body Styles */
+
 body {
     font-family: var(--font-body);
     color: var(--color-text-dark);
     background-color: var(--color-background);
     line-height: 1.6;
-    overflow-x: hidden; /* Prevents horizontal scroll from containers */
+    overflow-x: hidden;
 }
 
-/* Headings */
+
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     line-height: 1.2;
     font-weight: 700;
 }
 
-/* Utility Class for Primary CTA Buttons */
+
 .cta-primary, .cta-secondary {
     padding: 1rem 2rem;
     border: none;
@@ -53,7 +53,7 @@ h1, h2, h3, h4 {
     letter-spacing: 0.5px;
 }
 
-/* Primary CTA Style */
+
 .cta-primary {
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
@@ -69,46 +69,46 @@ h1, h2, h3, h4 {
     box-shadow: 0 6px 20px black;
 }
 
-/* Highlight Text */
+
 .highlight-text {
     color: var(--color-primary);
 }
 
-/* Base font sizes for responsiveness based on breakpoints */
-/* Extra Small (< 576px) */
+
+
 html {
     font-size: 14px;
 }
 
-/* Small (>= 576px) */
+
 @media (min-width: 576px) {
     html {
         font-size: 15px;
     }
 }
 
-/* Medium (>= 768px) */
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;
     }
 }
 
-/* Large (>= 992px) */
+
 @media (min-width: 992px) {
     html {
         font-size: 16px;
     }
 }
 
-/* Extra Large (>= 1200px) */
+
 @media (min-width: 1200px) {
     html {
         font-size: 18px;
     }
 }
 
-/* Extra Extra Large (>= 1400px) */
+
 @media (min-width: 1400px) {
     html {
         font-size: 20px;

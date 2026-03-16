@@ -70,6 +70,10 @@
 
 }
 
+.hamburger-icon {
+    cursor: pointer;
+}
+
 .cta-secondary-container {
     background-color: var(--color-primary);
     border-radius: 10px;
