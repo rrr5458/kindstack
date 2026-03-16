@@ -1,8 +1,8 @@
-// src/pages/AboutPage.tsx
+
 
 import React from 'react';
-import './../styles/PageStyles.css'; // General page layout styles
-import './../styles/AboutPage.css'; // Add this line
+import './../styles/PageStyles.css';
+import './../styles/AboutPage.css';
 
 const AboutPage: React.FC = () => {
   return (

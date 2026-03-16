@@ -1,4 +1,4 @@
-// src/components/CTA_Footer.tsx
+
 
 import React from 'react';
 import './../styles/CTA_Footer.css';

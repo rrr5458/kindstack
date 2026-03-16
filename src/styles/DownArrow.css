@@ -1,0 +1,15 @@
+.down-arrow {
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 0px #c77b1e);
+  display: block;
+  margin-top: 3.5px;
+}
+
+.down-arrow-open {
+  transform: rotate(180deg);
+}
+
+.down-arrow-closed {
+  transform: rotate(0deg);
+}

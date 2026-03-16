@@ -24,18 +24,18 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
   return (
     <section className="service-hero-section" id="service-page">
       <div className="content-container-main-services">
-        <div className="content-container-two" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
-          <div className="page-content service-detail-grid" style={{ width: '100%', marginTop: 0 }}>
-            <div className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center' }}>
+        <div className="content-container-two flex-col-start">
+          <div className="page-content service-detail-grid full-width-no-mt">
+            <div className="hero-gradient-overlay gradient-overlay-center">
               <GradientBackground title={prices.heading} subtitle={prices.subheading} blobColor={iconColor} prices={true} />
             </div>
 
-            <div className="services-title-one-container" style={{ width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <div style={{display: "flex", alignItems: "center", width: "70%"}}>
+            <div className="services-title-one-container title-container-flex">
+              <div className="flex-align-center-70">
                 <h1 className="hero-title-one services-title">
                   {title}
                 </h1>
-                  <span style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                  <span className="inline-middle">
                     <PixelSmiley color={iconColor} scale={6} />
                   </span>
               </div>
@@ -43,9 +43,9 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
             </div>
 
             {details.map((detail, index) => (
-              <div key={index} className="hero-gradient-overlay" style={{ pointerEvents: 'auto', display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div key={index} className="hero-gradient-overlay gradient-overlay-flex">
                 <GradientBackground title={detail.heading} subtitle={detail.text} blobColor={iconColor}>
-                  <ul style={{ listStylePosition: 'outside', paddingLeft: '2rem', marginTop: '2rem', textAlign: 'left' }}>
+                  <ul className="service-detail-list">
                     {detail.points.map((point, i) => (
                       <li key={i}>{point}</li>
                     ))}

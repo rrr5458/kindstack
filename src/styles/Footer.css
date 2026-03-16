@@ -1,8 +1,8 @@
-/* src/styles/Footer.css */
+
 
 .main-footer {
-    background-color: #e8d7bc; /* Changed to match header/theme background */
-    color: var(--color-text-dark); /* Dark text for contrast */
+    background-color: #e8d7bc;
+    color: var(--color-text-dark);
     padding: 5rem 5% 2rem;
     font-family: var(--font-body);
 }
@@ -23,7 +23,7 @@
 }
 
 .info-column {
-    flex: 1.5; /* Gives the main info column more space */
+    flex: 1.5;
 }
 
 .logo .brand-accent {
@@ -82,7 +82,7 @@
 .footer-column a:hover {
     color: var(--color-primary);
     opacity: 1;
-    padding-left: 5px; /* Subtle hover effect */
+    padding-left: 5px;
 }
 
 .social-links {
@@ -115,7 +115,7 @@
     font-weight: 500;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 991px) {
     .footer-content-wrapper {
         flex-wrap: wrap;

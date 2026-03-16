@@ -56,12 +56,12 @@ const Header: React.FC = () => {
             <button className="cta-secondary">Contact</button>
           </Link>
         </div>
-        <div className="dropdown-wrapper" style={{ position: "relative" }}>
+        <div className="dropdown-wrapper">
           <GiHamburgerMenu
             size={50}
             color={"#f99a26"}
-            style={{ cursor: "pointer" }}
             onClick={() => setIsOpen(!isOpen)}
+            className="hamburger-icon"
           />
           <Dropdown open={isOpen} onClose={() => setIsOpen(false)}/>
         </div>

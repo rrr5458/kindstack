@@ -55,7 +55,7 @@
   background-color: rgba(255, 166, 0, 0.396);
   border: none;
   cursor: pointer;
-  border-radius: 8px; /* matching the global button default */
+  border-radius: 8px;
   font-family: "Inter", sans-serif;
 }
 
@@ -63,7 +63,7 @@
   background-color: rgba(255, 166, 0, 0.6);
 }
 
-/* Responsive adjustments matching Hero */
+
 @media (max-width: 1510px) {
   .new-section-container {
     padding: 8rem 5rem;
