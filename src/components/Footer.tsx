@@ -1,4 +1,4 @@
-// src/components/Footer.tsx
+
 
 import React from 'react';
 import './../styles/Footer.css';
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     <footer className="main-footer">
       <div className="footer-content-wrapper">
         
-        {/* Column 1: Logo and Company Info */}
+        {}
         <div className="footer-column info-column">
           <div className="logo">
             <h1>
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Column 2: Quick Links */}
+        {}
         <div className="footer-column">
           <h4 className="column-title">Quick Links</h4>
           <ul>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Column 3: Legal & Support */}
+        {}
         <div className="footer-column">
           <h4 className="column-title">Support</h4>
           <ul>

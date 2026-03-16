@@ -11,13 +11,20 @@ type ManagedBackgroundProps = {
 
 const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: ManagedBackgroundProps) => {
   const interRef = useRef<HTMLDivElement>(null);
-
-  const blobColorStyle = {
-    height: prices ? "65%" : "100%",
-    "--color2": blobColor
-  } as React.CSSProperties;
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (containerRef.current) {
+      if (prices) {
+        containerRef.current.style.height = "65%";
+      } else {
+        containerRef.current.style.height = "100%";
+      }
+      if (blobColor) {
+        containerRef.current.style.setProperty("--color2", blobColor);
+      }
+    }
+
     let animationFrameId: number;
     
     const radiusX = 80;
@@ -41,7 +48,7 @@ const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: Man
   }, []);
 
   return (
-    <div className="gradient-bg" style={blobColorStyle}>
+    <div className="gradient-bg" ref={containerRef}>
       <div className="content-overlay">
         <h1 className={`managed-text-title ${prices ? 'prices-text' : ''}`}>{title}</h1>
         <span className={`managed-text-sub ${prices ? 'prices-text' : ''}`}>{subtitle}</span>
@@ -55,7 +62,7 @@ const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: Man
         <div ref={interRef} className="interactive"></div>
       </div>
 
-      <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
+      <svg xmlns="http://www.w3.org/2000/svg" className="svg-display-none">
         <defs>
           <filter id="goo">
             <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />

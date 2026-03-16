@@ -118,7 +118,7 @@
     letter-spacing: 0.5px;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 991px) {
     .contact-layout {
         grid-template-columns: 1fr;

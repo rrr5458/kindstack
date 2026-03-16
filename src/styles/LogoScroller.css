@@ -1,4 +1,4 @@
-/* LogoScroller.css */
+
 
 .scroller-root {
   width: 100%;
@@ -13,7 +13,7 @@
 .scroll-track {
   display: flex;
   width: max-content;
-  /* 40s is a good starting point, increase to 60s if it feels too fast now */
+
   animation: scroll-left 40s linear infinite;
 }
 
@@ -21,13 +21,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Maintained 10rem gap (5rem each side) */
+
   padding: 0 5rem; 
   flex-shrink: 0;
 }
 
 .logo-item-content {
-  /* DOUBLED SIZE: Changed from 32px to 64px */
+
   height: 64px; 
   width: auto;
   display: block;
@@ -46,7 +46,7 @@
   100% { transform: translateX(-50%); }
 }
 
-/* Widened the fades slightly for the larger logos */
+
 .edge-fade {
   position: absolute;
   top: 0;

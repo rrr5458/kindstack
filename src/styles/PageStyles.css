@@ -1,10 +1,10 @@
-/* src/styles/PageStyles.css */
+
 
 .page-container {
-    /* Standardizes width and padding for main page content */
+
     padding: 5rem 5%;
     max-width: 1200px;
-    min-height: 70vh; /* Ensures content pushes the footer down */
+    min-height: 70vh;
 }
 
 .page-header {
@@ -42,7 +42,7 @@
     margin-bottom: 0.5rem;
 }
 
-/* List styles for AboutPage and ServicesPage */
+
 .page-content ul {
     list-style-position: outside;
     list-style-type: disc;
@@ -54,7 +54,7 @@
     margin-bottom: 0.5rem;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 991px) {
     .page-container {
         padding: 4rem 5%;

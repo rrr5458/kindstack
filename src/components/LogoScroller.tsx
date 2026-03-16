@@ -3,7 +3,7 @@ import "./../styles/LogoScroller.css";
 
 const LogoScroller: React.FC = () =>  {
   const logos = [
-    // Logo 1: SVG
+
     {
       id: 1,
       content: (
@@ -20,7 +20,7 @@ const LogoScroller: React.FC = () =>  {
         </svg>
       )
     },
-    // Logo 2: SVG
+
     {
       id: 2,
       content: (
@@ -33,7 +33,7 @@ const LogoScroller: React.FC = () =>  {
         </svg>
       )
     },
-    // Assets folder svgs go here
+
     {
       id: 3,
       content: (
@@ -88,7 +88,7 @@ return (
       <div className="edge-fade fade-right" />
 
       <div className="scroll-track">
-        {/* Render twice for the infinite loop effect */}
+        {}
         {[...logos, ...logos].map((logo, index) => (
           <div key={`${logo.id}-${index}`} className="logo-wrapper">
             {logo.content}

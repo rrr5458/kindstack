@@ -1,9 +1,9 @@
-/* src/styles/CTA_Footer.css */
+
 
 .cta-footer-section {
     padding: 6rem 5%;
-    background-color: #f6edde; /* Match lighter contrast background similar to Contact page card */
-    color: var(--color-text-dark); /* Dark text for contrast */
+    background-color: #f6edde;
+    color: var(--color-text-dark);
     text-align: center;
 }
 
@@ -52,7 +52,7 @@
 
 .cta-form {
     flex: 1;
-    background-color: #ffffff; /* Explicitly hardcode to white to ignore global dark mode */
+    background-color: #ffffff;
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -94,7 +94,7 @@
     margin-top: 1rem;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 991px) {
     .cta-content-wrapper {
         flex-direction: column;

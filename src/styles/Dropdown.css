@@ -54,6 +54,11 @@
   gap: 4px;
 }
 
+.dropdown-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .dropdown-item {
   display: flex;
   align-items: flex-start;

@@ -85,7 +85,7 @@ function MenuColumn({ label, items, onClose }: { label: string; items: MenuItem[
           <Link
             key={item.title}
             to={item.path || "#"}
-            style={{ textDecoration: 'none', color: 'inherit' }}
+            className="dropdown-link"
             onClick={onClose}
           >
             <div
@@ -95,9 +95,7 @@ function MenuColumn({ label, items, onClose }: { label: string; items: MenuItem[
             >
               <div
                 className="dropdown-item__icon"
-                style={{
-                  borderColor: hovered === i ? item.color : "#e0d4be",
-                }}
+                style={hovered === i ? { borderColor: item.color } as React.CSSProperties : {} as React.CSSProperties}
               >
                 {item.icon}
               </div>

@@ -66,14 +66,14 @@ position: relative;
 }
 
 .gradients-container {
-  /* This stays absolute so it sits BEHIND the content */
+
   position: absolute;
   top: 0;
   left: 0;
   filter: url(#goo) blur(40px);
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensure it is behind the relative content-overlay */
+  z-index: 1;
 }
 
 .g1 {
@@ -101,6 +101,10 @@ position: relative;
   top: 20%;
   right: 10%;
   animation: moveInCircle 40s reverse infinite;
+}
+
+.svg-display-none {
+  display: none;
 }
 
 .interactive {
