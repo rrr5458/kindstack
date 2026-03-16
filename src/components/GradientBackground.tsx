@@ -16,7 +16,7 @@ const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: Man
   useEffect(() => {
     if (containerRef.current) {
       if (prices) {
-        containerRef.current.style.height = "65%";
+        containerRef.current.style.height = "70%";
       } else {
         containerRef.current.style.height = "100%";
       }
