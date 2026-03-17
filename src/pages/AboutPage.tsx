@@ -8,15 +8,17 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <section className="about-page-wrapper" id="about-page">
-        <div className="about-page-container">
 
-          <header className="about-hero-header">
-            <h1>About KindStack WebSolutions</h1>
-          </header>
-
-          <div className="about-hero-image-container">
-             <img src={bgImg} alt="Hero Background" className="about-hero-image" />
+        <div className="about-hero-container">
+          <img src={bgImg} alt="Hero Background" className="about-hero-image" />
+          <div className="about-hero-overlay">
+            <header className="about-hero-header">
+              <h1>About KindStack WebSolutions</h1>
+            </header>
           </div>
+        </div>
+
+        <div className="about-page-container">
 
           <div className="page-content">
             <div className="about-hero-text">
