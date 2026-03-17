@@ -21,6 +21,7 @@
     align-items: center;
     overflow: hidden;
     margin-bottom: 4rem;
+    background-color: #e8d7bc6c; /* Match hero-section background */
 }
 
 .about-hero-image {
@@ -31,14 +32,14 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    opacity: 0.07; /* Match hero-bg-img opacity */
 }
 
 .about-hero-overlay {
     position: relative;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.7); /* Optional text background */
     padding: 2rem;
-    border-radius: 16px;
+    /* Removed text background to match Hero */
 }
 
 .about-hero-header {
@@ -46,10 +47,14 @@
 }
 
 .about-hero-header h1 {
-    font-size: 4rem;
-    color: var(--color-text-dark);
+    font-size: 4.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0);
     line-height: 1.1;
     margin: 0;
+    letter-spacing: -2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Match hero-title-one */
 }
 
 .about-hero-text {
@@ -84,48 +89,33 @@
     text-align: center;
 }
 
-.value-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.value-list li {
+.value-grid {
     display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: var(--color-background);
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--color-light-gray);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.value-list li:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+.value-card-wrapper {
+    height: 400px;
+    width: 100%;
 }
 
-.value-icon {
-    font-size: 2rem;
-    margin-right: 1.5rem;
+
+@media (max-width: 1510px) {
+    .about-hero-header h1 {
+        font-size: 5.5rem;
+    }
 }
 
-.value-list li div {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: var(--color-text-dark);
+@media (max-width: 1199px) {
+    .about-hero-header h1 {
+        font-size: 5.5rem;
+    }
 }
-
-.value-list li strong {
-    color: var(--color-primary);
-}
-
 
 @media (max-width: 991px) {
     .about-hero-header h1 {
-        font-size: 3rem;
+        font-size: 4.5rem; /* Matches max-width: 767px in Hero.css, but 991px is good here */
     }
     .about-hero-text h2, .about-why-us h2 {
         font-size: 2rem;
@@ -137,7 +127,7 @@
 
 @media (max-width: 767px) {
     .about-hero-header h1 {
-        font-size: 2.5rem;
+        font-size: 4.5rem;
     }
     .about-hero-text {
         font-size: 1.1rem;
@@ -149,13 +139,13 @@
     .about-hero-container {
         height: 250px;
     }
-    .value-list li {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.2rem;
+    .value-card-wrapper {
+        height: 350px;
     }
-    .value-icon {
-        margin-right: 0;
-        margin-bottom: 0.5rem;
+}
+
+@media (max-width: 575px) {
+    .about-hero-header h1 {
+        font-size: 3rem;
     }
 }

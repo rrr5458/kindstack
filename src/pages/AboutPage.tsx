@@ -3,6 +3,7 @@ import './../styles/PageStyles.css';
 import './../styles/AboutPage.css';
 import bgImg from "../assets/shapes_hero_image.png";
 import CTA_Footer from "../components/CTA_Footer";
+import ManagedBackground from "../components/GradientBackground";
 
 const AboutPage: React.FC = () => {
   return (
@@ -33,26 +34,29 @@ const AboutPage: React.FC = () => {
 
             <div className="about-why-us">
               <h2>Why Choose Us?</h2>
-              <ul className="value-list">
-                <li>
-                  <span className="value-icon">🚀</span>
-                  <div>
-                    <strong>Startup Focus:</strong> We understand lean budgets and rapid iterations.
-                  </div>
-                </li>
-                <li>
-                  <span className="value-icon">💡</span>
-                  <div>
-                    <strong>Modern Stack:</strong> Built on cutting-edge, secure technology.
-                  </div>
-                </li>
-                <li>
-                  <span className="value-icon">🤝</span>
-                  <div>
-                     <strong>Dedicated Support:</strong> Direct access to the developers building your future.
-                  </div>
-                </li>
-              </ul>
+              <div className="value-grid">
+                <div className="value-card-wrapper">
+                  <ManagedBackground
+                    title="🚀 Startup Focus"
+                    subtitle="We understand lean budgets and rapid iterations."
+                    blobColor="#f99a26"
+                  />
+                </div>
+                <div className="value-card-wrapper">
+                  <ManagedBackground
+                    title="💡 Modern Stack"
+                    subtitle="Built on cutting-edge, secure technology."
+                    blobColor="#df9f40"
+                  />
+                </div>
+                <div className="value-card-wrapper">
+                  <ManagedBackground
+                    title="🤝 Dedicated Support"
+                    subtitle="Direct access to the developers building your future."
+                    blobColor="#e7d8c1"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
