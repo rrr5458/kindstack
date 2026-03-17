@@ -11,10 +11,38 @@
     padding-bottom: 5rem;
 }
 
+.about-hero-container {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Adjust as needed */
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.about-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.about-hero-overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.7); /* Optional text background */
+    padding: 2rem;
+    border-radius: 16px;
+}
+
 .about-hero-header {
     text-align: center;
-    margin-bottom: 2rem;
-    padding-top: 2rem;
 }
 
 .about-hero-header h1 {
@@ -22,23 +50,6 @@
     color: var(--color-text-dark);
     line-height: 1.1;
     margin: 0;
-}
-
-.about-hero-image-container {
-    width: 100%;
-    margin-bottom: 4rem;
-    display: flex;
-    justify-content: center;
-}
-
-.about-hero-image {
-    width: 100%;
-    max-width: 1000px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    background-color: var(--color-background);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .about-hero-text {
@@ -119,7 +130,7 @@
     .about-hero-text h2, .about-why-us h2 {
         font-size: 2rem;
     }
-    .about-hero-image {
+    .about-hero-container {
         height: 300px;
     }
 }
@@ -135,7 +146,7 @@
     .about-hero-text h2, .about-why-us h2 {
         font-size: 1.8rem;
     }
-    .about-hero-image {
+    .about-hero-container {
         height: 250px;
     }
     .value-list li {
