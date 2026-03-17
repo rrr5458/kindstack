@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           <ul>
             <li><a href="/#other-services">Our Services</a></li>
             <li><a href="/about">About Us</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/faq">FAQ</a></li>
           </ul>
         </div>
 
