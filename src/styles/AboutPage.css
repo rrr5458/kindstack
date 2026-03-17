@@ -1,5 +1,7 @@
 .about-page-container {
-    padding: 3rem
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #about-page {
@@ -9,67 +11,140 @@
     padding-bottom: 5rem;
 }
 
-.about-layout {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 8rem;
-    align-items: flex-start;
-    margin-top: 2rem;
+.about-hero-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
 }
 
-.about-content {
+.about-hero-header h1 {
+    font-size: 4rem;
+    color: var(--color-text-dark);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.about-hero-image-container {
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about-hero-image {
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
     background-color: var(--color-background);
-    color: var(--color-text-dark);
-    padding: 1.5rem;
-    border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--color-light-gray);
 }
 
-.about-info-card {
-    background-color: var(--color-background);
-    color: var(--color-text-dark);
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--color-light-gray);
-}
-
-.about-info-card h2 {
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
+.about-hero-text {
+    max-width: 800px;
+    margin: 0 auto 5rem auto;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.8;
     color: var(--color-text-dark);
 }
 
-.about-info-card p {
+.about-hero-text h2 {
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: var(--color-text-dark);
-    font-size: 1.1rem;
+}
+
+.about-hero-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-why-us {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-why-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+    text-align: center;
 }
 
 .value-list {
-    list-style-type: '👉 ';
-    color: var(--color-primary);
-    padding-left: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .value-list li {
-    padding-left: 0.5rem;
-    color: var(--color-text-dark);
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--color-background);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-light-gray);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.value-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.value-icon {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.value-list li div {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+}
+
+.value-list li strong {
+    color: var(--color-primary);
+}
+
+
 @media (max-width: 991px) {
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .about-hero-header h1 {
+        font-size: 3rem;
+    }
+    .about-hero-text h2, .about-why-us h2 {
+        font-size: 2rem;
+    }
+    .about-hero-image {
+        height: 300px;
     }
 }
 
-@media (max-width: 575px) {
-    .about-content,
-    .about-info-card {
-        padding: 2rem;
+@media (max-width: 767px) {
+    .about-hero-header h1 {
+        font-size: 2.5rem;
+    }
+    .about-hero-text {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    .about-hero-text h2, .about-why-us h2 {
+        font-size: 1.8rem;
+    }
+    .about-hero-image {
+        height: 250px;
+    }
+    .value-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.2rem;
+    }
+    .value-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 }
