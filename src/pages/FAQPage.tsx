@@ -54,7 +54,7 @@ const FAQPage: React.FC = () => {
   ];
 
   return (
-    <section className="page-container" id="faq-page">
+    <section className="new-section-container" id="faq-page">
       <header className="page-header">
         <h1>Frequently Asked Questions</h1>
         <p className="page-subtitle">Find answers to common questions about our services and process.</p>
