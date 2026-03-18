@@ -1,7 +1,5 @@
 .about-page-container {
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 2rem 3rem;
 }
 
 #about-page {
@@ -14,14 +12,13 @@
 .about-hero-container {
     position: relative;
     width: 100%;
-    height: 40vh; /* Adjust as needed */
+    height: 100%;
     min-height: 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     overflow: hidden;
-    margin-bottom: 4rem;
-    background-color: #e8d7bc6c; /* Match hero-section background */
+    padding: 10rem 2rem 2rem 2rem;
+    margin-bottom: 1rem;
 }
 
 .about-hero-image {
@@ -32,14 +29,12 @@
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.07; /* Match hero-bg-img opacity */
+    opacity: 0.2; 
 }
 
 .about-hero-overlay {
-    position: relative;
     z-index: 1;
-    padding: 2rem;
-    /* Removed text background to match Hero */
+    padding: 1rem;
 }
 
 .about-hero-header {
@@ -49,54 +44,68 @@
 .about-hero-header h1 {
     font-size: 4.5rem;
     font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     color: rgba(0, 0, 0);
     line-height: 1.1;
-    margin: 0;
     letter-spacing: -2px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Match hero-title-one */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .about-hero-text {
-    max-width: 800px;
-    margin: 0 auto 5rem auto;
-    text-align: center;
+    max-width: 60%;
+    padding: 3rem;
     font-size: 1.3rem;
     line-height: 1.8;
     color: var(--color-text-dark);
 }
 
-.about-hero-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-dark);
-}
-
-.about-hero-text p {
-    margin-bottom: 1.5rem;
-}
-
-.about-why-us {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.about-why-us h2 {
-    font-size: 2.5rem;
+.about-hero-text-heading {
+    font-size: 2.0rem;
     margin-bottom: 2rem;
     color: var(--color-text-dark);
-    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+.about-hero-text-p {
+    margin-bottom: 1.5rem;
+}
+
+.about-why-us-one {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+}
+
+.about-why-us-sub {
+    width: 60%;
+    font-size: 1.5rem;
+    color: #626364;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem
+}
+
+.about-why-us-two {
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+}
+
 
 .value-grid {
     display: flex;
-    flex-direction: column;
     gap: 2rem;
+    margin-top: 1.5rem;
 }
 
 .value-card-wrapper {
-    height: 400px;
     width: 100%;
 }
 
@@ -115,7 +124,7 @@
 
 @media (max-width: 991px) {
     .about-hero-header h1 {
-        font-size: 4.5rem; /* Matches max-width: 767px in Hero.css, but 991px is good here */
+        font-size: 4.5rem;
     }
     .about-hero-text h2, .about-why-us h2 {
         font-size: 2rem;
