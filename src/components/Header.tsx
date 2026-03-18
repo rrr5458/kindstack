@@ -51,8 +51,8 @@ const Header: React.FC = () => {
 
   return (
     <header className={headerClass}>
-      <Link to="/">
-        <div className="left-section">
+      <div className="left-section">
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <img
             src={imgSroucePng}
             width="50"
@@ -60,18 +60,18 @@ const Header: React.FC = () => {
             alt="Description of the image"
           ></img>
           <div className="logo">
-            <h1>
+            <h1 style={{ display: 'flex', alignItems: 'baseline', margin: 0 }}>
               <span className="brand-accent">KindStack</span>
               <span className="brand-tagline">WebSolutions</span>
             </h1>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
       <div className="middle-section">
       </div>
       <div className="right-section">
         <div className="cta-secondary-container">
-          <Link to="/contact">
+          <Link to="/contact" style={{ textDecoration: 'none' }}>
             <button className="cta-secondary">816.550.3857</button>
           </Link>
         </div>
