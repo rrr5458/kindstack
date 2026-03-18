@@ -24,11 +24,11 @@ const Hero: React.FC = () => {
             <h2 className="hero-title-one">
               AI That Actually Knows Your Business
             </h2>
-            <span className="hero-sub-one">
+            <p className="hero-sub-one">
               No coding. Simply sync your website or manuals and let our AI handle the rest. <br />
 
-              Accesible for every budget
-            </span>
+              Accessible for every budget
+            </p>
             <div className="cta-secondary-container-hero">
               <Link to="/contact">
                 <button className="cta-secondary-hero">Get a Demo</button>
