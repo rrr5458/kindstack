@@ -25,7 +25,9 @@ const Hero: React.FC = () => {
               AI That Actually Knows Your Business
             </h2>
             <span className="hero-sub-one">
-              No coding. Simply sync your website or manuals and let our AI handle the rest.
+              No coding. Simply sync your website or manuals and let our AI handle the rest. <br />
+
+              Accesible for every budget
             </span>
             <div className="cta-secondary-container-hero">
               <Link to="/contact">

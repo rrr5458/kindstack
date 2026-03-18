@@ -9,8 +9,8 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Hero />
-      <OtherServices />
       <AboutUs />
+      <OtherServices />
       <PriceBlurb />
       <CTA_Footer />
     </>

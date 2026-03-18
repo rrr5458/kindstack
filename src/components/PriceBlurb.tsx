@@ -1,5 +1,7 @@
-import React from 'react';
-import '../styles/NewComponents.css';
+import React from "react";
+import "../styles/NewComponents.css";
+import "../styles/Hero.css";
+import { Link } from "react-router-dom";
 
 const PriceBlurb: React.FC = () => {
   return (
@@ -7,10 +9,10 @@ const PriceBlurb: React.FC = () => {
       <h2 className="new-section-title">
         Find out how much it would to grow your business
       </h2>
-      <div className="new-section-btn-container">
-        <button className="new-section-btn">
-          Get a Quote
-        </button>
+      <div className="cta-secondary-container-hero">
+        <Link to="/contact">
+          <button className="cta-secondary-hero">Get a Demo</button>
+        </Link>
       </div>
     </section>
   );
