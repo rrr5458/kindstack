@@ -31,8 +31,8 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
             </div>
 
             <div className="services-title-one-container title-container-flex">
-              <div className="flex-align-center-70">
-                <h1 className="hero-title-one services-title">
+              <div className="title-smile-container">
+                <h1 className="services-title">
                   {title}
                 </h1>
                   <span className="inline-middle">
