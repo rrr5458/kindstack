@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./../styles/Header.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import imgSroucePng from "../assets/3dsmiley.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Dropdown from "./Dropdown";
@@ -8,7 +8,26 @@ import Dropdown from "./Dropdown";
 const Header: React.FC = () => {
 
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +75,7 @@ const Header: React.FC = () => {
             <button className="cta-secondary">816.550.3857</button>
           </Link>
         </div>
-        <div className="dropdown-wrapper">
+        <div className="dropdown-wrapper" ref={dropdownRef}>
           <GiHamburgerMenu
             size={50}
             color={"#f99a26"}
