@@ -7,7 +7,7 @@ const PriceBlurb: React.FC = () => {
   return (
     <section id="price-blurb" className="new-section-container bg-alt">
       <h2 className="new-section-title">
-        Find out how much it would to grow your business
+        Find out how much it would cost to grow your business
       </h2>
       <div className="cta-secondary-container-hero">
         <Link to="/contact">

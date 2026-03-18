@@ -19,9 +19,6 @@ const Footer: React.FC = () => {
             </h1>
           </div>
           <p className="tagline">Modern web development and AI automation built for growth.</p>
-          <div className="social-links">
-            <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedin /></a>
-          </div>
         </div>
 
         {}

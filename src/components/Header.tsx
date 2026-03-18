@@ -53,7 +53,7 @@ const Header: React.FC = () => {
       <div className="right-section">
         <div className="cta-secondary-container">
           <Link to="/contact">
-            <button className="cta-secondary">Contact</button>
+            <button className="cta-secondary">816.550.3857</button>
           </Link>
         </div>
         <div className="dropdown-wrapper">

@@ -77,14 +77,11 @@ const ContactPage: React.FC = () => {
           <h2>Prefer to talk?</h2>
           <p>We're available for a quick chat to discuss your needs.</p>
           <p>
-            <strong>Email:</strong> <br/><a href="mailto:contact@kindstack.com">contact@kindstack.com</a>
+            <strong>Email:</strong> <br/><a href="mailto:rrr5458@gmail.com">rrr5458@gmail.com</a>
           </p>
           <p>
-            <strong>Phone:</strong> <br/><a href="tel:+15551234567">(555) 123-4567</a>
+            <strong>Phone:</strong> <br/><a href="tel:+18165503857">(816) 550-3857</a>
           </p>
-            <div className="social-links">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
           </div>
         </div>
       </div>
