@@ -71,6 +71,13 @@ const serviceItems: MenuItem[] = [
     color: "#7b61ff",
     path: "/services/apis-and-integrations",
   },
+  {
+    icon: <PixelSmiley color="#00b4d8" />,
+    title: "About Us",
+    description: "Learn more about our team and mission",
+    color: "#00b4d8",
+    path: "/about",
+  },
 ];
 
 
