@@ -1,11 +1,10 @@
 .main-header {
     width: 100%;
     display: flex;
-    position: fixed;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 2% 0.75rem 1.75%;
-    background-color:#f6edde; 
+    padding: 0.75rem 5%;
+    background-color: #f6edde;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -26,48 +25,51 @@
 }
 
 .logo .brand-accent {
-    font-size: 3rem;
+    font-size: 1.75rem;
     color: #f99a26;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style:unset;
     font-weight: 900;
-    letter-spacing: 0.015em;
-    -webkit-text-stroke: 2px black; 
+    letter-spacing: -0.02em;
+    -webkit-text-stroke: 1px black;
 }
 
 .logo .brand-tagline {
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: #718096;
-    letter-spacing: 0.05em;
-    margin-left: 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #4a5568;
+    letter-spacing: 0.02em;
+    margin-left: 0.75rem;
 }
 
 .middle-section {
     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 5rem;
-    margin-top: 1.2rem
 }
 
 .middle-link {
     display: flex;
     flex-direction: row;
-    margin-right: 8rem;
+    margin: 0 1rem;
 }
 
 .middle-link-text {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     margin-right: 0.5rem;
+    color: #1a202c;
+    transition: color 0.2s ease;
+}
+
+.middle-link-text:hover {
     color: #f99a26;
 }
 
 .right-section {
     display: flex;
     align-items: center;
-
 }
 
 .hamburger-icon {
@@ -75,35 +77,37 @@
 }
 
 .cta-secondary-container {
-    background-color: var(--color-primary);
-    border-radius: 10px;
     margin-right: 1.5rem;
 }
 
 .cta-secondary {
-    border: 2px solid black;
-    color: var(--color-background, #FFFFFF);
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    background-color: rgba(255, 166, 0, 0.396);
+    border: none;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    background-color: rgb(140, 203, 5);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .cta-secondary:hover {
-    background-color: var(--color-primary, black);
-    color: var(--color-background, #FFFFFF);
+    background-color: rgb(120, 180, 5);
+    transform: translateY(-1px);
 }
 
 .header-nav {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .header-nav a {
     text-decoration: none;
-    color: var(--color-text-light, #ffffff); 
+    color: #4a5568;
     font-weight: 500;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+    font-size: 1rem;
+    transition: color 0.2s ease;
     padding: 0.5rem 0;
 }
 

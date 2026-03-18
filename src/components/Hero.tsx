@@ -24,11 +24,11 @@ const Hero: React.FC = () => {
             <h2 className="hero-title-one">
               AI That Actually Knows Your Business
             </h2>
-            <span className="hero-sub-one">
+            <p className="hero-sub-one">
               No coding. Simply sync your website or manuals and let our AI handle the rest. <br />
 
-              Accesible for every budget
-            </span>
+              Accessible for every budget
+            </p>
             <div className="cta-secondary-container-hero">
               <Link to="/contact">
                 <button className="cta-secondary-hero">Get a Demo</button>
@@ -52,12 +52,6 @@ const Hero: React.FC = () => {
             </video>
           </div>
         </div>
-        <div className="scroller-container">
-          <span className="scroller-caption">
-            WORKING ALONGSIDE
-          </span>
-          <LogoScroller />
-        </div>
         <div className="content-container-two">
           <div className="hero-gradient-overlay mr-5rem">
             <GradientBackground title={"Your Support Team’s New Secret Weapon"} subtitle={"Automate 80% of your customer queries. Our AI learns from your FAQ and help desk to provide instant, human-like responses 24/7"} blobColor="#f99a26"/>
@@ -65,6 +59,12 @@ const Hero: React.FC = () => {
           <div className="hero-gradient-overlay">
             <GradientBackground title={"Your Knowledge, Now Conversational"} subtitle={"Turn your website, PDFs, and business manuals into a secure, private AI agent that answers customers with 100% factual accuracy"}/>
           </div>
+        </div>
+        <div className="scroller-container">
+          <span className="scroller-caption">
+            WORKING ALONGSIDE
+          </span>
+          <LogoScroller />
         </div>
       </div>
     </section>
