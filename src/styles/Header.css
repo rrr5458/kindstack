@@ -82,18 +82,18 @@
 
 .cta-secondary {
     border: none;
-    color: #1a202c;
+    color: white;
     padding: 0.6rem 1.5rem;
     font-size: 0.9375rem;
     font-weight: 600;
-    background-color: #f99a26;
+    background-color: rgb(140, 203, 5);
     border-radius: 9999px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .cta-secondary:hover {
-    background-color: #e08922;
+    background-color: rgb(120, 180, 5);
     transform: translateY(-1px);
 }
 
