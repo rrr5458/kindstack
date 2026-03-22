@@ -149,6 +149,12 @@
     .about-hero-text h2, .about-why-us h2 {
         font-size: 1.8rem;
     }
+    .about-why-us-sub {
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
     .about-hero-container {
         height: 250px;
     }
