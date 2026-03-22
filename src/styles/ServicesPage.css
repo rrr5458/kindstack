@@ -123,6 +123,7 @@
 @media (max-width: 767px) {
     .service-detail-grid {
         grid-template-columns: 1fr;
+        grid-auto-rows: auto;
     }
     .title-smile-container {
         gap: 10px;
