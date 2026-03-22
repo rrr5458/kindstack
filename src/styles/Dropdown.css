@@ -191,6 +191,8 @@
   .dropdown-card {
     flex-direction: column;
     padding: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
   }
   .dropdown-divider {
     width: 100%;
