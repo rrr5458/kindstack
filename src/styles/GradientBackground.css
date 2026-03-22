@@ -48,7 +48,7 @@
 
 .managed-text-sub {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.808);
   letter-spacing: -2px;
@@ -62,7 +62,7 @@
 
 .content-overlay li {
   font-family: "Inter", sans-serif;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.808);
   letter-spacing: -2px;
