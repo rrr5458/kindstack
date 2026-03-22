@@ -15,11 +15,6 @@ const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: Man
 
   useEffect(() => {
     if (containerRef.current) {
-      if (prices) {
-        containerRef.current.style.height = "70%";
-      } else {
-        containerRef.current.style.height = "100%";
-      }
       if (blobColor) {
         containerRef.current.style.setProperty("--color2", blobColor);
       }
@@ -48,7 +43,7 @@ const ManagedBackground = ({ title, subtitle, children, blobColor, prices }: Man
   }, []);
 
   return (
-    <div className="gradient-bg" ref={containerRef}>
+    <div className={`gradient-bg ${prices ? 'prices-bg' : ''}`} ref={containerRef}>
       <div className="content-overlay">
         <h1 className={`managed-text-title ${prices ? 'prices-text' : ''}`}>{title}</h1>
         <span className={`managed-text-sub ${prices ? 'prices-text' : ''}`}>{subtitle}</span>

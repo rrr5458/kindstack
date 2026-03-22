@@ -55,9 +55,19 @@
   margin-top: 6rem;
 }
 
+.prices-bg {
+  height: 70%;
+}
+
 .prices-text {
   font-size: clamp(1.5rem, 5vw, 3rem);
   margin-top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .gradient-bg {
+    height: auto !important;
+  }
 }
 
 .content-overlay li {
