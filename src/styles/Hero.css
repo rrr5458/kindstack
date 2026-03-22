@@ -243,18 +243,26 @@
   .hero-content {
     max-width: 100%;
   }
+  .mr-5rem {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 767px) {
   .content-container-one {
     padding: 5rem 2rem;
   }
+  .hero-title-one-container {
+    align-items: center;
+    text-align: center;
+  }
   .hero-sub-one {
     width: 100%;
   }
 
   .cta-secondary-container-hero {
-    width: 50%;
+    width: 100%;
+    justify-content: center;
   }
 
   .cta-secondary-hero {
@@ -272,7 +280,8 @@
   }
 
   .cta-secondary-container-hero {
-    width: 55%;
+    width: 100%;
+    justify-content: center;
   }
   .cta-secondary-hero {
     font-size: 1.25rem;

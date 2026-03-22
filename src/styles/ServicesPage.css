@@ -32,8 +32,18 @@
   position: relative;
 }
 
+.services-sub-one {
+  font-size: clamp(2rem, 2vw, 1.375rem);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .services-title {
-    width: 100%;
+    width: auto;
     font-size: 3rem;
 }
 
@@ -113,5 +123,14 @@
 @media (max-width: 767px) {
     .service-detail-grid {
         grid-template-columns: 1fr;
+    }
+    .title-smile-container {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .services-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        text-align: center;
     }
 }

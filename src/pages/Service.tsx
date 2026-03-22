@@ -39,7 +39,7 @@ const Service: React.FC<ServiceProps> = ({ title, iconColor, description, detail
                     <PixelSmiley color={iconColor} scale={6} />
                   </span>
               </div>
-              <p className="hero-sub-one">{description}</p>
+              <p className="services-sub-one">{description}</p>
             </div>
 
             {details.map((detail, index) => (

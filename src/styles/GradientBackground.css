@@ -34,11 +34,13 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .managed-text-title {
   font-family: "Inter", sans-serif;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: 800;
   color: rgba(0, 0, 0, 0.832);
   letter-spacing: -2px;
@@ -46,7 +48,7 @@
 
 .managed-text-sub {
   font-family: "Inter", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.808);
   letter-spacing: -2px;
@@ -54,13 +56,13 @@
 }
 
 .prices-text {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   margin-top: 1rem;
 }
 
 .content-overlay li {
   font-family: "Inter", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.808);
   letter-spacing: -2px;
