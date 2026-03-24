@@ -44,7 +44,8 @@
 
 .services-title {
     width: auto;
-    font-size: 3rem;
+    font-size: min(3rem, 6vw);
+    white-space: nowrap;
 }
 
 .flex-col-start {
@@ -131,7 +132,8 @@
         align-items: center;
     }
     .services-title {
-        font-size: clamp(2rem, 5vw, 3rem);
+        font-size: min(3rem, 8vw);
         text-align: center;
+        white-space: nowrap;
     }
 }
