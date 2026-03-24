@@ -159,8 +159,7 @@
     }
 
     .logo .brand-tagline {
-        font-size: 0.7rem;
-        margin-left: 0.5rem;
+        display: none;
     }
 }
 
