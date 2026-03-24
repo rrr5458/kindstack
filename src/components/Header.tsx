@@ -59,7 +59,7 @@ const Header: React.FC = () => {
             height="50"
             alt="Description of the image"
           ></img>
-          <div className="logo">
+          <div className="header-logo">
             <h1 style={{ display: 'flex', alignItems: 'baseline', margin: 0 }}>
               <span className="brand-accent">KindStack</span>
               <span className="brand-tagline">WebSolutions</span>
