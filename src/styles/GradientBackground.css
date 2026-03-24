@@ -44,6 +44,8 @@
   font-weight: 800;
   color: rgba(0, 0, 0, 0.832);
   letter-spacing: -2px;
+  line-height: 1.1;
+  min-height: calc(4 * clamp(1.5rem, 5vw, 3rem) * 1.1);
 }
 
 .managed-text-sub {
@@ -62,6 +64,7 @@
 .prices-text {
   font-size: clamp(1.5rem, 5vw, 3rem);
   margin-top: 1rem;
+  min-height: auto;
 }
 
 @media (max-width: 767px) {
