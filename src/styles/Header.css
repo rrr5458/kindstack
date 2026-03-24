@@ -154,8 +154,13 @@
 }
 
 @media (max-width: 575px) {
-    .logo {
-        display: none;
+    .logo .brand-accent {
+        font-size: 1.25rem;
+    }
+
+    .logo .brand-tagline {
+        font-size: 0.7rem;
+        margin-left: 0.5rem;
     }
 }
 
