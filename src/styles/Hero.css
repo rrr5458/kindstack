@@ -111,15 +111,26 @@
   z-index: 5;
 }
 
-.hero-video-container .hero-video {
+.try-it-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  margin-bottom: 2rem;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.try-it-text {
+  font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: rgb(140, 203, 5);
+  transform: rotate(-10deg);
+  text-shadow: 2px 2px 0px #000;
+  margin-bottom: 1rem;
+}
+
+.try-it-arrow {
+  margin-left: 5rem;
+  filter: drop-shadow(3px 3px 0px rgba(0,0,0,1));
 }
 
 .content-container-two {
@@ -231,9 +242,11 @@
     padding: 6rem 3rem;
     gap: 2rem;
   }
-  .hero-title-one-container,
-  .hero-video-container {
+  .hero-title-one-container {
     width: 100%;
+  }
+  .hero-video-container {
+    display: none;
   }
   .content-container-two {
     flex-direction: column;

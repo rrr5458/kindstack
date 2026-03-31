@@ -43,13 +43,12 @@ const Hero: React.FC = () => {
             />
           </div>
           <div className="hero-video-container">
-            <video autoPlay loop muted playsInline className="hero-video">
-              <source
-                src="https://cdn.prod.website-files.com/5c97e8c9de94e8a3480419a5/63c1b35938ee466aac93e225_new-full_10-transcode.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+            <div className="try-it-content">
+              <span className="try-it-text">Try it out!</span>
+              <svg className="try-it-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="150" height="150">
+                <path d="M 30 30 Q 120 40 140 110 L 170 100 L 150 180 L 70 150 L 105 135 Q 90 60 30 55 Z" fill="#f99a26" stroke="black" strokeWidth="5" strokeLinejoin="round" />
+              </svg>
+            </div>
           </div>
         </div>
         <div className="content-container-two">
