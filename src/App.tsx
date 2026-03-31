@@ -79,7 +79,7 @@ const App: React.FC = () => {
                 title="Site Hosting"
                 iconColor="#ff5f6e"
                 description="Reliable, high-performance hosting that keeps your website fast, secure, and always online."
-                prices={{ heading: "$150 Setup", subheading: "Starting at $7/month" }}
+                prices={{ heading: "$30 Setup", subheading: "Starting at $7/month" }}
                 details={[
                   {
                     heading: "Managed Hosting",

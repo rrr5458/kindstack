@@ -11,7 +11,7 @@ Turn your website into a 24/7 assistant that answers questions, captures leads, 
 
 ### Site Hosting
 Reliable, high-performance hosting that keeps your website fast, secure, and always online.
-*   **Pricing**: $150 Setup Fee, Starting at $7/month.
+*   **Pricing**: $30 Setup Fee, Starting at $7/month.
 *   **Features**: Managed Hosting (automatic backups, security monitoring), Performance Optimization.
 
 ### Web Development
