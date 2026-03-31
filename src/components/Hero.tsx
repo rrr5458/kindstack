@@ -6,8 +6,24 @@ import circleImg from "../assets/orange-circle.png";
 import GradientBackground from "./GradientBackground";
 import { Link } from "react-router-dom";
 import LogoScroller from "./LogoScroller";
+import { useState, useEffect } from "react";
 
 const Hero: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="hero-section">
       <div className="image-background">
@@ -43,10 +59,21 @@ const Hero: React.FC = () => {
             />
           </div>
           <div className="hero-video-container">
-            <div className="try-it-content">
+            <div className={`try-it-content ${isScrolled ? 'hidden' : ''}`}>
               <span className="try-it-text">Try it out!</span>
-              <svg className="try-it-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="150" height="150">
-                <path d="M 30 30 Q 120 40 140 110 L 170 100 L 150 180 L 70 150 L 105 135 Q 90 60 30 55 Z" fill="#f99a26" stroke="black" strokeWidth="5" strokeLinejoin="round" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 600 600"
+                width="600"
+                height="600"
+                className="try-it-arrow"
+              >
+                <path
+                  d="M100,50 Q400,100 480,450 L430,450 L520,550 L580,420 L530,420 Q450,50 100,0 Z"
+                  fill="#f99a26"
+                  stroke="black"
+                  strokeWidth="10"
+                />
               </svg>
             </div>
           </div>

@@ -52,9 +52,6 @@
 }
 
 .hero-video-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 40%;
   z-index: 10;
 }
@@ -112,10 +109,17 @@
 }
 
 .try-it-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  right: -80px;
+  z-index: 9999;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.try-it-content.hidden {
+  opacity: 0;
+  transform: translateY(20px);
 }
 
 .try-it-text {
@@ -125,13 +129,17 @@
   color: rgb(140, 203, 5);
   transform: rotate(-10deg);
   text-shadow: 2px 2px 0px #000;
-  margin-bottom: 1rem;
+  margin-bottom: -150px;
+  margin-left: -350px;
+  position: relative;
+  z-index: 2;
+  display: block;
 }
 
 .try-it-arrow {
-  margin-left: 5rem;
   filter: drop-shadow(3px 3px 0px rgba(0,0,0,1));
 }
+
 
 .content-container-two {
   display: flex;
