@@ -79,3 +79,34 @@ h1, h2, h3, h4 {
 html {
     font-size: 16px;
 }
+/* Try me decoration pointing to bottom right corner */
+.try-me-decoration {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 135px;
+  height: 135px;
+  border-top: 4px dashed rgb(140, 203, 5);
+  border-left: 4px dashed rgb(140, 203, 5);
+  border-top-left-radius: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.try-me-text {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  transform: translate(-100%, -50%) rotate(-15deg);
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1a202c;
+  white-space: nowrap;
+}
+
+@media (max-width: 1506px) {
+  .try-me-decoration {
+    display: none !important;
+  }
+}

@@ -233,6 +233,9 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
+      <div className="try-me-decoration hidden lg:block">
+        <span className="try-me-text">Trye me</span>
+      </div>
     </div>
   );
 };
