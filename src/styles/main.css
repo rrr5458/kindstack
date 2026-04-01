@@ -84,19 +84,19 @@ html {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 150px;
-  height: 150px;
-  border-top: 2px dashed black;
-  border-left: 2px dashed black;
+  width: 135px;
+  height: 135px;
+  border-top: 4px dashed rgb(140, 203, 5);
+  border-left: 4px dashed rgb(140, 203, 5);
   border-top-left-radius: 100%;
   pointer-events: none;
-  z-index: 9998; /* Underneath the chat widget */
+  z-index: 9998;
 }
 
 .try-me-text {
   position: absolute;
   top: 30px;
-  left: -20px;
+  left: 0px;
   transform: translate(-100%, -50%) rotate(-15deg);
   font-family: "Inter", sans-serif;
   font-size: 1.25rem;
