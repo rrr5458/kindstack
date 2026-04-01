@@ -105,13 +105,7 @@ html {
   white-space: nowrap;
 }
 
-@media (max-width: 991px) {
-  .try-me-decoration {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1506px) {
+@media (max-width: 1506px) {
   .try-me-decoration {
     display: none !important;
   }
