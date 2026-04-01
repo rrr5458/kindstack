@@ -29,10 +29,13 @@ const Hero: React.FC = () => {
 
               Accessible for every budget
             </p>
-            <div className="cta-secondary-container-hero">
+            <div className="cta-secondary-container-hero relative inline-block">
               <Link to="/contact">
                 <button className="cta-secondary-hero">Get a Demo</button>
               </Link>
+              <div className="try-me-decoration hidden lg:block">
+                <span className="try-me-text">Trye me</span>
+              </div>
             </div>
             <img
               src={circleImg}
