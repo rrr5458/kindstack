@@ -290,35 +290,3 @@
     padding: 2rem 1rem;
   }
 }
-
-/* Try me decoration */
-.try-me-decoration {
-  position: absolute;
-  bottom: -20px;
-  right: -30px;
-  width: 40px;
-  height: 40px;
-  border-bottom: 2px dashed black;
-  border-right: 2px dashed black;
-  border-bottom-right-radius: 100%;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.try-me-text {
-  position: absolute;
-  bottom: -20px;
-  right: -80px;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1a202c;
-  white-space: nowrap;
-  transform: rotate(-10deg);
-}
-
-@media (max-width: 991px) {
-  .try-me-decoration {
-    display: none !important;
-  }
-}

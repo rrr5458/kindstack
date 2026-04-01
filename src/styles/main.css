@@ -79,3 +79,34 @@ h1, h2, h3, h4 {
 html {
     font-size: 16px;
 }
+/* Try me decoration pointing to bottom right corner */
+.try-me-decoration {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-top: 2px dashed black;
+  border-left: 2px dashed black;
+  border-top-left-radius: 100%;
+  pointer-events: none;
+  z-index: 9998; /* Underneath the chat widget */
+}
+
+.try-me-text {
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  transform: translate(-100%, -50%) rotate(-15deg);
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1a202c;
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .try-me-decoration {
+    display: none !important;
+  }
+}
