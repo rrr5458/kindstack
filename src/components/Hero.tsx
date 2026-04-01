@@ -6,6 +6,7 @@ import circleImg from "../assets/orange-circle.png";
 import GradientBackground from "./GradientBackground";
 import { Link } from "react-router-dom";
 import LogoScroller from "./LogoScroller";
+import heroVideo from "../assets/Video_Recreation_With_Orange_Scheme.mp4";
 
 const Hero: React.FC = () => {
   return (
@@ -25,8 +26,8 @@ const Hero: React.FC = () => {
               AI That Actually Knows Your Business
             </h2>
             <p className="hero-sub-one">
-              No coding. Simply sync your website or manuals and let our AI handle the rest. <br />
-
+              No coding. Simply sync your website or manuals and let our AI
+              handle the rest. <br />
               Accessible for every budget
             </p>
             <div className="cta-secondary-container-hero">
@@ -43,27 +44,41 @@ const Hero: React.FC = () => {
             />
           </div>
           <div className="hero-video-container">
-            <video autoPlay loop muted playsInline className="hero-video">
-              <source
-                src="https://cdn.prod.website-files.com/5c97e8c9de94e8a3480419a5/63c1b35938ee466aac93e225_new-full_10-transcode.mp4"
-                type="video/mp4"
-              />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              disablePictureInPicture
+              className="hero-video"
+            >
+              <source src={heroVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
         <div className="content-container-two">
           <div className="hero-gradient-overlay mr-5rem">
-            <GradientBackground title={"Your Support Team’s New Secret Weapon"} subtitle={"Automate 80% of your customer queries. Our AI learns from your FAQ and help desk to provide instant, human-like responses 24/7"} blobColor="#f99a26"/>
+            <GradientBackground
+              title={"Your Support Team’s New Secret Weapon"}
+              subtitle={
+                "Automate 80% of your customer queries. Our AI learns from your FAQ and help desk to provide instant, human-like responses 24/7"
+              }
+              blobColor="#f99a26"
+            />
           </div>
           <div className="hero-gradient-overlay">
-            <GradientBackground title={"Your Knowledge, Now Conversational"} subtitle={"Turn your website, PDFs, and business manuals into a secure, private AI agent that answers customers with 100% factual accuracy"}/>
+            <GradientBackground
+              title={"Your Knowledge, Now Conversational"}
+              subtitle={
+                "Turn your website, PDFs, and business manuals into a secure, private AI agent that answers customers with 100% factual accuracy"
+              }
+            />
           </div>
         </div>
         <div className="scroller-container">
-          <span className="scroller-caption">
-            WORKING ALONGSIDE
-          </span>
+          <span className="scroller-caption">WORKING ALONGSIDE</span>
           <LogoScroller />
         </div>
       </div>
