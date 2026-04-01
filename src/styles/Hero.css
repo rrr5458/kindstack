@@ -43,7 +43,7 @@
 }
 
 .hero-sub-one {
-  font-size: clamp(2rem, 2vw, 1.375rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #4a5568;

@@ -58,8 +58,12 @@ const ContactPage: React.FC = () => {
             <label htmlFor="project-type">Project Type</label>
             <select id="project-type" name="projectType" required>
               <option value="" disabled>Select a service</option>
+              <option value="ai-chat">AI Chat Bot</option>
+              <option value="integration">Software Integration</option>
               <option value="new">New Website Build</option>
+              <option value="mobile">Mobile App</option>
               <option value="feature">Feature Enhancement</option>
+              <option value="automation">Automate Workflow</option>
               <option value="bug">Bug Fixes & Maintenance</option>
               <option value="other">Other</option>
             </select>
