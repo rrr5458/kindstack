@@ -110,3 +110,9 @@ html {
     display: none !important;
   }
 }
+
+@media (min-width: 1506px) {
+  .try-me-decoration {
+    display: none !important;
+  }
+}
