@@ -37,9 +37,9 @@
     padding: 1rem;
 }
 
-.about-hero-header {
+/* .about-hero-header {
     text-align: center;
-}
+} */
 
 .about-hero-header h1 {
     font-size: 4.5rem;
@@ -151,16 +151,15 @@
     }
     .about-why-us-sub {
         font-size: 1.1rem;
-        text-align: center;
         width: 100%;
         margin-left: 0;
     }
     .about-hero-container {
         height: 250px;
     }
-    .value-card-wrapper {
+    /* .value-card-wrapper {
         height: 350px;
-    }
+    } */
 }
 
 @media (max-width: 575px) {

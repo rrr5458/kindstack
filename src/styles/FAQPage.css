@@ -38,6 +38,10 @@
   transition: background-color 0.3s ease;
 }
 
+.faq-question:focus {
+    outline: none;
+}
+
 .faq-question:hover {
   background-color: var(--color-light-gray);
 }
@@ -84,9 +88,9 @@
   font-weight: 500;
 }
 
-.faq-answer a:hover {
+/* .faq-answer a:hover {
   text-decoration: underline;
-}
+} */
 
 .faq-contact-cta {
   text-align: center;

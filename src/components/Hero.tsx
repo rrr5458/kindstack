@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
               AI That Actually Knows Your Business
             </h2>
             <p className="hero-sub-one">
-              No coding. Simply sync your website or manuals and let our AI
+              No coding. Simply sync your website or business documents and let our AI
               handle the rest. <br />
               Accessible for every budget
             </p>
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
             <GradientBackground
               title={"Your Support Team’s New Secret Weapon"}
               subtitle={
-                "Automate 80% of your customer queries. Our AI learns from your FAQ and help desk to provide instant, human-like responses 24/7"
+                "Automate 90% of your customer queries. Our AI learns from your FAQ and help desk to provide instant, human-like responses 24/7 for your website, Facebook, Instagram and more"
               }
               blobColor="#f99a26"
             />
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             <GradientBackground
               title={"Your Knowledge, Now Conversational"}
               subtitle={
-                "Turn your website, PDFs, and business manuals into a secure, private AI agent that answers customers with 100% factual accuracy"
+                "Turn your website, PDFs, and business manuals into a secure, private AI agent that answers customers with accuracy"
               }
             />
           </div>

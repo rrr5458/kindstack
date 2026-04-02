@@ -10,7 +10,7 @@ const AboutUs: React.FC = () => {
       <p className="new-section-text">
         Giving small bussinesses and nonprofits the tools that power great
         software, which have gotten remarkably accessible. We noticed the
-        agencies and firms are selling those solutions kept charging more. We
+        agencies and firms selling those solutions keep charging more. We
         think that's backwards. Our clients deserve modern, powerful technology
         at a price that reflects what it actually costs to build
       </p>
